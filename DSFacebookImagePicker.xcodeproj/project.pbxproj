@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		F484A9D319EC98E2005C50D3 /* DSPhotoAlbum.swift in Sources */ = {isa = PBXBuildFile; fileRef = F484A9D219EC98E2005C50D3 /* DSPhotoAlbum.swift */; };
 		F484A9D519ECDA16005C50D3 /* dirtblock.png in Resources */ = {isa = PBXBuildFile; fileRef = F484A9D419ECDA16005C50D3 /* dirtblock.png */; };
-		F484A9D719ECECD5005C50D3 /* FBNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F484A9D619ECECD5005C50D3 /* FBNavigationController.swift */; };
+		F4892FE819EDE73D000FB760 /* FBNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4892FE719EDE73D000FB760 /* FBNavigationController.swift */; };
 		F4B8A3F519EC794700EE1EFE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4B8A3F419EC794700EE1EFE /* AppDelegate.swift */; };
 		F4B8A3F719EC794700EE1EFE /* AlbumListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4B8A3F619EC794700EE1EFE /* AlbumListViewController.swift */; };
 		F4B8A3F919EC794700EE1EFE /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4B8A3F819EC794700EE1EFE /* SecondViewController.swift */; };
@@ -35,7 +35,7 @@
 /* Begin PBXFileReference section */
 		F484A9D219EC98E2005C50D3 /* DSPhotoAlbum.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DSPhotoAlbum.swift; sourceTree = "<group>"; };
 		F484A9D419ECDA16005C50D3 /* dirtblock.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = dirtblock.png; sourceTree = "<group>"; };
-		F484A9D619ECECD5005C50D3 /* FBNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FBNavigationController.swift; path = ../FBNavigationController.swift; sourceTree = "<group>"; };
+		F4892FE719EDE73D000FB760 /* FBNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FBNavigationController.swift; sourceTree = "<group>"; };
 		F4B8A3EF19EC794700EE1EFE /* DSFacebookImagePicker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DSFacebookImagePicker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F4B8A3F319EC794700EE1EFE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F4B8A3F419EC794700EE1EFE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -97,8 +97,8 @@
 				F4B8A3F619EC794700EE1EFE /* AlbumListViewController.swift */,
 				F4B8A3F819EC794700EE1EFE /* SecondViewController.swift */,
 				F4B8A41B19EC7C8F00EE1EFE /* FBLoginViewController.swift */,
+				F4892FE719EDE73D000FB760 /* FBNavigationController.swift */,
 				F4B8A41D19EC84AF00EE1EFE /* DSFacebookNetworking.swift */,
-				F484A9D619ECECD5005C50D3 /* FBNavigationController.swift */,
 				F484A9D219EC98E2005C50D3 /* DSPhotoAlbum.swift */,
 				F4B8A3FA19EC794700EE1EFE /* Main.storyboard */,
 				F4B8A3FD19EC794700EE1EFE /* Images.xcassets */,
@@ -240,7 +240,7 @@
 				F4B8A3F919EC794700EE1EFE /* SecondViewController.swift in Sources */,
 				F484A9D319EC98E2005C50D3 /* DSPhotoAlbum.swift in Sources */,
 				F4B8A41E19EC84AF00EE1EFE /* DSFacebookNetworking.swift in Sources */,
-				F484A9D719ECECD5005C50D3 /* FBNavigationController.swift in Sources */,
+				F4892FE819EDE73D000FB760 /* FBNavigationController.swift in Sources */,
 				F4B8A3F519EC794700EE1EFE /* AppDelegate.swift in Sources */,
 				F4B8A41C19EC7C8F00EE1EFE /* FBLoginViewController.swift in Sources */,
 				F4B8A3F719EC794700EE1EFE /* AlbumListViewController.swift in Sources */,
