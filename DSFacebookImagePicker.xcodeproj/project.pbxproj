@@ -1,0 +1,466 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		F484A9D319EC98E2005C50D3 /* DSPhotoAlbum.swift in Sources */ = {isa = PBXBuildFile; fileRef = F484A9D219EC98E2005C50D3 /* DSPhotoAlbum.swift */; };
+		F484A9D519ECDA16005C50D3 /* dirtblock.png in Resources */ = {isa = PBXBuildFile; fileRef = F484A9D419ECDA16005C50D3 /* dirtblock.png */; };
+		F484A9D719ECECD5005C50D3 /* FBNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F484A9D619ECECD5005C50D3 /* FBNavigationController.swift */; };
+		F4B8A3F519EC794700EE1EFE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4B8A3F419EC794700EE1EFE /* AppDelegate.swift */; };
+		F4B8A3F719EC794700EE1EFE /* AlbumListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4B8A3F619EC794700EE1EFE /* AlbumListViewController.swift */; };
+		F4B8A3F919EC794700EE1EFE /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4B8A3F819EC794700EE1EFE /* SecondViewController.swift */; };
+		F4B8A3FC19EC794700EE1EFE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F4B8A3FA19EC794700EE1EFE /* Main.storyboard */; };
+		F4B8A3FE19EC794700EE1EFE /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F4B8A3FD19EC794700EE1EFE /* Images.xcassets */; };
+		F4B8A40119EC794700EE1EFE /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = F4B8A3FF19EC794700EE1EFE /* LaunchScreen.xib */; };
+		F4B8A40D19EC794700EE1EFE /* DSFacebookImagePickerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4B8A40C19EC794700EE1EFE /* DSFacebookImagePickerTests.swift */; };
+		F4B8A41A19EC7A1D00EE1EFE /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F4B8A41919EC7A1D00EE1EFE /* FacebookSDK.framework */; };
+		F4B8A41C19EC7C8F00EE1EFE /* FBLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4B8A41B19EC7C8F00EE1EFE /* FBLoginViewController.swift */; };
+		F4B8A41E19EC84AF00EE1EFE /* DSFacebookNetworking.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4B8A41D19EC84AF00EE1EFE /* DSFacebookNetworking.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		F4B8A40719EC794700EE1EFE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F4B8A3E719EC794700EE1EFE /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F4B8A3EE19EC794700EE1EFE;
+			remoteInfo = DSFacebookImagePicker;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		F484A9D219EC98E2005C50D3 /* DSPhotoAlbum.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DSPhotoAlbum.swift; sourceTree = "<group>"; };
+		F484A9D419ECDA16005C50D3 /* dirtblock.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = dirtblock.png; sourceTree = "<group>"; };
+		F484A9D619ECECD5005C50D3 /* FBNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FBNavigationController.swift; path = ../FBNavigationController.swift; sourceTree = "<group>"; };
+		F4B8A3EF19EC794700EE1EFE /* DSFacebookImagePicker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DSFacebookImagePicker.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F4B8A3F319EC794700EE1EFE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F4B8A3F419EC794700EE1EFE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		F4B8A3F619EC794700EE1EFE /* AlbumListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumListViewController.swift; sourceTree = "<group>"; };
+		F4B8A3F819EC794700EE1EFE /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
+		F4B8A3FB19EC794700EE1EFE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		F4B8A3FD19EC794700EE1EFE /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		F4B8A40019EC794700EE1EFE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		F4B8A40619EC794700EE1EFE /* DSFacebookImagePickerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DSFacebookImagePickerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F4B8A40B19EC794700EE1EFE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F4B8A40C19EC794700EE1EFE /* DSFacebookImagePickerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DSFacebookImagePickerTests.swift; sourceTree = "<group>"; };
+		F4B8A41819EC79C500EE1EFE /* BridgingHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BridgingHeader.h; sourceTree = "<group>"; };
+		F4B8A41919EC7A1D00EE1EFE /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FacebookSDK.framework; sourceTree = "<group>"; };
+		F4B8A41B19EC7C8F00EE1EFE /* FBLoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FBLoginViewController.swift; sourceTree = "<group>"; };
+		F4B8A41D19EC84AF00EE1EFE /* DSFacebookNetworking.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DSFacebookNetworking.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		F4B8A3EC19EC794700EE1EFE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F4B8A41A19EC7A1D00EE1EFE /* FacebookSDK.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F4B8A40319EC794700EE1EFE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		F4B8A3E619EC794700EE1EFE = {
+			isa = PBXGroup;
+			children = (
+				F4B8A3F119EC794700EE1EFE /* DSFacebookImagePicker */,
+				F4B8A40919EC794700EE1EFE /* DSFacebookImagePickerTests */,
+				F4B8A3F019EC794700EE1EFE /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		F4B8A3F019EC794700EE1EFE /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F4B8A3EF19EC794700EE1EFE /* DSFacebookImagePicker.app */,
+				F4B8A40619EC794700EE1EFE /* DSFacebookImagePickerTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F4B8A3F119EC794700EE1EFE /* DSFacebookImagePicker */ = {
+			isa = PBXGroup;
+			children = (
+				F4B8A3F419EC794700EE1EFE /* AppDelegate.swift */,
+				F4B8A3F619EC794700EE1EFE /* AlbumListViewController.swift */,
+				F4B8A3F819EC794700EE1EFE /* SecondViewController.swift */,
+				F4B8A41B19EC7C8F00EE1EFE /* FBLoginViewController.swift */,
+				F4B8A41D19EC84AF00EE1EFE /* DSFacebookNetworking.swift */,
+				F484A9D619ECECD5005C50D3 /* FBNavigationController.swift */,
+				F484A9D219EC98E2005C50D3 /* DSPhotoAlbum.swift */,
+				F4B8A3FA19EC794700EE1EFE /* Main.storyboard */,
+				F4B8A3FD19EC794700EE1EFE /* Images.xcassets */,
+				F4B8A3FF19EC794700EE1EFE /* LaunchScreen.xib */,
+				F4B8A41819EC79C500EE1EFE /* BridgingHeader.h */,
+				F484A9D419ECDA16005C50D3 /* dirtblock.png */,
+				F4B8A41919EC7A1D00EE1EFE /* FacebookSDK.framework */,
+				F4B8A3F219EC794700EE1EFE /* Supporting Files */,
+			);
+			path = DSFacebookImagePicker;
+			sourceTree = "<group>";
+		};
+		F4B8A3F219EC794700EE1EFE /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				F4B8A3F319EC794700EE1EFE /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		F4B8A40919EC794700EE1EFE /* DSFacebookImagePickerTests */ = {
+			isa = PBXGroup;
+			children = (
+				F4B8A40C19EC794700EE1EFE /* DSFacebookImagePickerTests.swift */,
+				F4B8A40A19EC794700EE1EFE /* Supporting Files */,
+			);
+			path = DSFacebookImagePickerTests;
+			sourceTree = "<group>";
+		};
+		F4B8A40A19EC794700EE1EFE /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				F4B8A40B19EC794700EE1EFE /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		F4B8A3EE19EC794700EE1EFE /* DSFacebookImagePicker */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F4B8A41019EC794700EE1EFE /* Build configuration list for PBXNativeTarget "DSFacebookImagePicker" */;
+			buildPhases = (
+				F4B8A3EB19EC794700EE1EFE /* Sources */,
+				F4B8A3EC19EC794700EE1EFE /* Frameworks */,
+				F4B8A3ED19EC794700EE1EFE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = DSFacebookImagePicker;
+			productName = DSFacebookImagePicker;
+			productReference = F4B8A3EF19EC794700EE1EFE /* DSFacebookImagePicker.app */;
+			productType = "com.apple.product-type.application";
+		};
+		F4B8A40519EC794700EE1EFE /* DSFacebookImagePickerTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F4B8A41319EC794700EE1EFE /* Build configuration list for PBXNativeTarget "DSFacebookImagePickerTests" */;
+			buildPhases = (
+				F4B8A40219EC794700EE1EFE /* Sources */,
+				F4B8A40319EC794700EE1EFE /* Frameworks */,
+				F4B8A40419EC794700EE1EFE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F4B8A40819EC794700EE1EFE /* PBXTargetDependency */,
+			);
+			name = DSFacebookImagePickerTests;
+			productName = DSFacebookImagePickerTests;
+			productReference = F4B8A40619EC794700EE1EFE /* DSFacebookImagePickerTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		F4B8A3E719EC794700EE1EFE /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0600;
+				ORGANIZATIONNAME = Sanche;
+				TargetAttributes = {
+					F4B8A3EE19EC794700EE1EFE = {
+						CreatedOnToolsVersion = 6.0.1;
+					};
+					F4B8A40519EC794700EE1EFE = {
+						CreatedOnToolsVersion = 6.0.1;
+						TestTargetID = F4B8A3EE19EC794700EE1EFE;
+					};
+				};
+			};
+			buildConfigurationList = F4B8A3EA19EC794700EE1EFE /* Build configuration list for PBXProject "DSFacebookImagePicker" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = F4B8A3E619EC794700EE1EFE;
+			productRefGroup = F4B8A3F019EC794700EE1EFE /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F4B8A3EE19EC794700EE1EFE /* DSFacebookImagePicker */,
+				F4B8A40519EC794700EE1EFE /* DSFacebookImagePickerTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		F4B8A3ED19EC794700EE1EFE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F4B8A3FC19EC794700EE1EFE /* Main.storyboard in Resources */,
+				F4B8A40119EC794700EE1EFE /* LaunchScreen.xib in Resources */,
+				F484A9D519ECDA16005C50D3 /* dirtblock.png in Resources */,
+				F4B8A3FE19EC794700EE1EFE /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F4B8A40419EC794700EE1EFE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		F4B8A3EB19EC794700EE1EFE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F4B8A3F919EC794700EE1EFE /* SecondViewController.swift in Sources */,
+				F484A9D319EC98E2005C50D3 /* DSPhotoAlbum.swift in Sources */,
+				F4B8A41E19EC84AF00EE1EFE /* DSFacebookNetworking.swift in Sources */,
+				F484A9D719ECECD5005C50D3 /* FBNavigationController.swift in Sources */,
+				F4B8A3F519EC794700EE1EFE /* AppDelegate.swift in Sources */,
+				F4B8A41C19EC7C8F00EE1EFE /* FBLoginViewController.swift in Sources */,
+				F4B8A3F719EC794700EE1EFE /* AlbumListViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F4B8A40219EC794700EE1EFE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F4B8A40D19EC794700EE1EFE /* DSFacebookImagePickerTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		F4B8A40819EC794700EE1EFE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F4B8A3EE19EC794700EE1EFE /* DSFacebookImagePicker */;
+			targetProxy = F4B8A40719EC794700EE1EFE /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		F4B8A3FA19EC794700EE1EFE /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F4B8A3FB19EC794700EE1EFE /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		F4B8A3FF19EC794700EE1EFE /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F4B8A40019EC794700EE1EFE /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		F4B8A40E19EC794700EE1EFE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		F4B8A40F19EC794700EE1EFE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		F4B8A41119EC794700EE1EFE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/DSFacebookImagePicker",
+				);
+				INFOPLIST_FILE = DSFacebookImagePicker/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = DSFacebookImagePicker/BridgingHeader.h;
+			};
+			name = Debug;
+		};
+		F4B8A41219EC794700EE1EFE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/DSFacebookImagePicker",
+				);
+				INFOPLIST_FILE = DSFacebookImagePicker/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = DSFacebookImagePicker/BridgingHeader.h;
+			};
+			name = Release;
+		};
+		F4B8A41419EC794700EE1EFE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = DSFacebookImagePickerTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DSFacebookImagePicker.app/DSFacebookImagePicker";
+			};
+			name = Debug;
+		};
+		F4B8A41519EC794700EE1EFE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = DSFacebookImagePickerTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DSFacebookImagePicker.app/DSFacebookImagePicker";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		F4B8A3EA19EC794700EE1EFE /* Build configuration list for PBXProject "DSFacebookImagePicker" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F4B8A40E19EC794700EE1EFE /* Debug */,
+				F4B8A40F19EC794700EE1EFE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F4B8A41019EC794700EE1EFE /* Build configuration list for PBXNativeTarget "DSFacebookImagePicker" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F4B8A41119EC794700EE1EFE /* Debug */,
+				F4B8A41219EC794700EE1EFE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F4B8A41319EC794700EE1EFE /* Build configuration list for PBXNativeTarget "DSFacebookImagePickerTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F4B8A41419EC794700EE1EFE /* Debug */,
+				F4B8A41519EC794700EE1EFE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = F4B8A3E719EC794700EE1EFE /* Project object */;
+}
