@@ -44,9 +44,9 @@ class PhotoCollectionViewController:  UICollectionViewController, UICollectionVi
   override func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
 
     if photoList != nil{
-      let cell = collectionView.dequeueReusableCellWithReuseIdentifier("PhotoCell", forIndexPath: indexPath) as UICollectionViewCell
+      let cell = collectionView.dequeueReusableCellWithReuseIdentifier("PhotoCell", forIndexPath: indexPath) as PhotoCell
       let thisPhoto = photoList![indexPath.row]
-    //  cell.setUpWithAlbum(thisPhoto)
+      cell.setUpWithPhoto(thisPhoto)
       return cell
     } else {
       let placeholder = collectionView.dequeueReusableCellWithReuseIdentifier("PrototypeCell", forIndexPath: indexPath) as UICollectionViewCell

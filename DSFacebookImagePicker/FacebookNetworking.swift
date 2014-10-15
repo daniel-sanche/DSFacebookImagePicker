@@ -130,7 +130,7 @@ class FacebookNetworking: NSObject {
     }
   }
   
-  class func findBestImageURL(imageOptionsArray:NSArray, minImageSize:Int=100) -> NSURL?{
+  class func findBestImageURL(imageOptionsArray:NSArray, minImageSize:Int=Int.min) -> NSURL?{
     let sortDescriptor = NSSortDescriptor(key:"height", ascending: true)
     let sortedArray = imageOptionsArray.sortedArrayUsingDescriptors([sortDescriptor]) as [NSDictionary]
     

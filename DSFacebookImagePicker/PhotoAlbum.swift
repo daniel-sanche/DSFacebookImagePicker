@@ -46,8 +46,15 @@ class PhotoAlbum {
                 } else {
                     
                     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), {
-                        let photoData = NSData(contentsOfURL: bestImageURL!)
-                        self.coverPhoto = UIImage(data: photoData)
+                      var writeError: NSError?
+                      let data = NSData(contentsOfURL:bestImageURL!, options: nil, error: &writeError)
+                  
+                      if let error = writeError{
+                        self.imageLoadFailed = true
+                      } else {
+                        self.coverPhoto = UIImage(data:data)
+                      }
+                      
                     })
                 }
             }

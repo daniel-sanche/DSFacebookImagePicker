@@ -24,8 +24,27 @@ class Photo {
     imageLoadFailed = false
     
     let imageArray = json["images"] as NSArray
-    thumbnailURL = FacebookNetworking.findBestImageURL(imageArray, minImageSize:100)
+    thumbnailURL = FacebookNetworking.findBestImageURL(imageArray, minImageSize:Int.min)
     fullImageURL = FacebookNetworking.findBestImageURL(imageArray, minImageSize:fullImageSize)    
+  }
+  
+  func loadThumbnail(){
+    imageLoadFailed = false
+    if self.thumbnailURL == nil{
+      imageLoadFailed = true
+      return
+    }
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), {
+      var readError: NSError?
+      let data = NSData(contentsOfURL:self.thumbnailURL!, options: nil, error: &readError)
+      
+      if let error = readError{
+        self.imageLoadFailed = true
+      } else {
+          self.thumbnailData = UIImage(data:data)
+      }
+      
+    })
   }
   
 }

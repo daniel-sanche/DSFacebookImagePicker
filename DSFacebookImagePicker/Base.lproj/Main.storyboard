@@ -152,15 +152,29 @@
                             <inset key="sectionInset" minX="0.0" minY="1" maxX="0.0" maxY="1"/>
                         </collectionViewFlowLayout>
                         <cells>
-                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="PhotoCell" id="dIg-eE-4Mo">
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="PhotoCell" id="nsE-hJ-sHU" customClass="PhotoCell" customModule="DSFacebookImagePicker" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                     <rect key="frame" x="0.0" y="0.0" width="90" height="75"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dirtblock.png" translatesAutoresizingMaskIntoConstraints="NO" id="ZR3-SC-JR0">
+                                            <rect key="frame" x="0.0" y="0.0" width="90" height="75"/>
+                                        </imageView>
+                                    </subviews>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 </view>
-                                <color key="backgroundColor" red="0.2233184677" green="0.44654898850000002" blue="0.89194147099999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="ZR3-SC-JR0" firstAttribute="leading" secondItem="nsE-hJ-sHU" secondAttribute="leading" id="HT5-oK-rLG"/>
+                                    <constraint firstItem="ZR3-SC-JR0" firstAttribute="top" secondItem="nsE-hJ-sHU" secondAttribute="top" id="WIC-EF-cug"/>
+                                    <constraint firstAttribute="trailing" secondItem="ZR3-SC-JR0" secondAttribute="trailing" id="kPQ-vY-p5U"/>
+                                    <constraint firstAttribute="bottom" secondItem="ZR3-SC-JR0" secondAttribute="bottom" id="xvn-l6-Qfs"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="imageView" destination="ZR3-SC-JR0" id="WDC-8S-mTT"/>
+                                </connections>
                             </collectionViewCell>
                             <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="PrototypeCell" id="Q1g-d0-vll">
                                 <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
@@ -169,7 +183,7 @@
                                     <rect key="frame" x="0.0" y="0.0" width="90" height="75"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dirtblock.png" translatesAutoresizingMaskIntoConstraints="NO" id="aGf-Fs-DEo">
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dirtblock.png" translatesAutoresizingMaskIntoConstraints="NO" id="aGf-Fs-DEo">
                                             <rect key="frame" x="0.0" y="0.0" width="90" height="75"/>
                                         </imageView>
                                     </subviews>
