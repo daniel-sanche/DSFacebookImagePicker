@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6245" systemVersion="14A388a" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="49e-Tb-3d3">
     <dependencies>
+        <deployment defaultVersion="1792" identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6238"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
@@ -88,10 +89,10 @@
             </objects>
             <point key="canvasLocation" x="1498" y="-236"/>
         </scene>
-        <!--Second-->
+        <!--Pictures-->
         <scene sceneID="wg7-f3-ORb">
             <objects>
-                <viewController id="8rJ-Kc-sve" customClass="SecondViewController" customModule="DSFacebookImagePicker" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="8rJ-Kc-sve" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="L7p-HK-0SC"/>
                         <viewControllerLayoutGuide type="bottom" id="Djb-ko-YwX"/>
@@ -122,49 +123,11 @@
                             <constraint firstAttribute="centerY" secondItem="zEq-FU-wV5" secondAttribute="centerY" id="qzY-Ky-pLD"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Second" image="second" id="cPa-gy-q4n"/>
+                    <tabBarItem key="tabBarItem" title="Pictures" image="second" id="cPa-gy-q4n"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Nw-L8-lE0" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1562" y="360"/>
-        </scene>
-        <!--Login View Controller-->
-        <scene sceneID="SfM-nX-5Au">
-            <objects>
-                <viewController id="I2n-3i-zld" customClass="FBLoginViewController" customModule="DSFacebookImagePicker" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="S8f-l0-04B"/>
-                        <viewControllerLayoutGuide type="bottom" id="PMH-Yc-9RK"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="OOu-HQ-MCL">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JEU-Uq-TLt" customClass="FBLoginView">
-                                <rect key="frame" x="157" y="274" width="287" height="51"/>
-                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="287" id="XZk-Wj-OBC"/>
-                                    <constraint firstAttribute="height" constant="51" id="yRr-4Y-HzG"/>
-                                </constraints>
-                                <connections>
-                                    <outlet property="delegate" destination="I2n-3i-zld" id="4AX-vP-kFP"/>
-                                </connections>
-                            </view>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstAttribute="centerX" secondItem="JEU-Uq-TLt" secondAttribute="centerX" id="XDA-PQ-8pg"/>
-                            <constraint firstAttribute="centerY" secondItem="JEU-Uq-TLt" secondAttribute="centerY" id="gS1-Hm-bVG"/>
-                        </constraints>
-                    </view>
-                    <connections>
-                        <outlet property="loginButton" destination="JEU-Uq-TLt" id="IrD-kH-xzO"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="RNi-dE-U36" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="58" y="910"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="yl2-sM-qoP">
@@ -189,11 +152,11 @@
             </objects>
             <point key="canvasLocation" x="0.0" y="0.0"/>
         </scene>
-        <!--Item-->
+        <!--Albums-->
         <scene sceneID="ka0-pR-Gsw">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Y37-cl-oE4" customClass="FBNavigationController" customModule="DSFacebookImagePicker" customModuleProvider="target" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="xCf-9s-vc7"/>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Y37-cl-oE4" customClass="FacebookNavController" customModule="DSFacebookImagePicker" customModuleProvider="target" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Albums" image="second" id="xCf-9s-vc7"/>
                     <toolbarItems/>
                     <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="8W1-Fr-cnH">
