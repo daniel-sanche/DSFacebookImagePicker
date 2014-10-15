@@ -137,7 +137,7 @@
             </objects>
             <point key="canvasLocation" x="686" y="-228"/>
         </scene>
-        <!--Photo Collection View Controller-->
+        <!--My Photos-->
         <scene sceneID="WdY-2Q-K86">
             <objects>
                 <collectionViewController id="syc-NE-kDW" customClass="PhotoCollectionViewController" customModule="DSFacebookImagePicker" customModuleProvider="target" sceneMemberID="viewController">
@@ -167,9 +167,20 @@
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                     <rect key="frame" x="0.0" y="0.0" width="90" height="75"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dirtblock.png" translatesAutoresizingMaskIntoConstraints="NO" id="aGf-Fs-DEo">
+                                            <rect key="frame" x="0.0" y="0.0" width="90" height="75"/>
+                                        </imageView>
+                                    </subviews>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 </view>
-                                <color key="backgroundColor" red="0.2333288043" green="0.2497719961" blue="0.29069996840000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="aGf-Fs-DEo" secondAttribute="bottom" id="7Md-4C-7Jc"/>
+                                    <constraint firstItem="aGf-Fs-DEo" firstAttribute="leading" secondItem="Q1g-d0-vll" secondAttribute="leading" id="bNY-bc-D4o"/>
+                                    <constraint firstAttribute="trailing" secondItem="aGf-Fs-DEo" secondAttribute="trailing" id="lVV-sZ-Bgl"/>
+                                    <constraint firstItem="aGf-Fs-DEo" firstAttribute="top" secondItem="Q1g-d0-vll" secondAttribute="top" id="sCT-8b-NQ4"/>
+                                </constraints>
                             </collectionViewCell>
                         </cells>
                         <connections>
@@ -177,7 +188,7 @@
                             <outlet property="delegate" destination="syc-NE-kDW" id="muZ-8i-ahn"/>
                         </connections>
                     </collectionView>
-                    <navigationItem key="navigationItem" id="5Ng-9F-r9l"/>
+                    <navigationItem key="navigationItem" title="My Photos" id="5Ng-9F-r9l"/>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0Zn-Xw-mbk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

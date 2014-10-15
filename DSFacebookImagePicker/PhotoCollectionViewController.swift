@@ -8,7 +8,7 @@
 
 import UIKit
 
-class PhotoCollectionViewController: UICollectionViewController {
+class PhotoCollectionViewController:  UICollectionViewController, UICollectionViewDelegateFlowLayout {
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -45,5 +45,14 @@ class PhotoCollectionViewController: UICollectionViewController {
     
     return cell
   }
+  
+  func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAtIndexPath indexPath: NSIndexPath) -> CGSize {
+    
+    let screenWidth = self.view.bounds.width
+    let quarterWidth = screenWidth / 4
+    return CGSize(width: quarterWidth-3, height: quarterWidth*1.3)
+    
+  }
+  
 
 }
