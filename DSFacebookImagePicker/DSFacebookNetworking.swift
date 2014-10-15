@@ -11,7 +11,7 @@ import UIKit
 class DSFacebookNetworking: NSObject {
     
     
-     class func getAlbumList(completionHandler:([DSPhotoAlbum]?, NSError?)->()){
+     class func getAlbumList(completionHandler:([PhotoAlbum]?, NSError?)->()){
     
         //attempt log in
         if(!isLoggedIn()){
@@ -32,10 +32,10 @@ class DSFacebookNetworking: NSObject {
         if let json = result as? NSDictionary{
             
             
-            var albumList = [DSPhotoAlbum]()
+            var albumList = [PhotoAlbum]()
             
             for thisAlbumDict in json.objectForKey("data") as NSArray{
-                let newAlbum = DSPhotoAlbum(json:thisAlbumDict as NSDictionary)
+                let newAlbum = PhotoAlbum(json:thisAlbumDict as NSDictionary)
                 albumList.append(newAlbum)
             }
             

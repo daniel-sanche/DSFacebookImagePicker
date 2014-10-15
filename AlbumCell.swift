@@ -16,13 +16,13 @@ class AlbumCell: UITableViewCell {
     
     
 
-    func setUpWithAlbum(album:DSPhotoAlbum){
+    func setUpWithAlbum(album:PhotoAlbum){
         titleLabel?.text = album.name
         
         setImage(album)
     }
     
-    func setImage(album:DSPhotoAlbum){
+    func setImage(album:PhotoAlbum){
         
 
         if let foundPhoto = album.coverPhoto{

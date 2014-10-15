@@ -1,5 +1,5 @@
 //
-//  DSPhotoAlbum.swift
+//  PhotoAlbum.swift
 //  DSFacebookImagePicker
 //
 //  Created by Home on 2014-10-13.
@@ -7,7 +7,7 @@
 //
 
 
-class DSPhotoAlbum {
+class PhotoAlbum {
     let name : String
     let URL : NSURL
     let count : Int

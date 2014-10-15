@@ -12,7 +12,7 @@ import UIKit
 
 class AlbumListViewController: UITableViewController {
 
-    var albumList : [DSPhotoAlbum]? = nil
+    var albumList : [PhotoAlbum]? = nil
     let rowHeight = 65 as CGFloat
     
 
