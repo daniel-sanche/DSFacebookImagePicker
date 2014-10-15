@@ -12,9 +12,10 @@ class Photo {
   let photoID : String
   let ownerName : String
   let fullImageURL : NSURL?
-  let thumbnailURL : NSURL?
+  var thumbnailURL : NSURL?
   var thumbnailData : UIImage?
   var imageLoadFailed : Bool
+  var isCached : Bool
   
   init(json:NSDictionary, fullImageSize:Int=Int.max) {
     let fromDict = json["from"] as [String : String]
@@ -22,6 +23,7 @@ class Photo {
     photoID = json["id"] as String
     ownerName = fromDict["name"]!
     imageLoadFailed = false
+    isCached = false
     
     let imageArray = json["images"] as NSArray
     thumbnailURL = FacebookNetworking.findBestImageURL(imageArray, minImageSize:Int.min)
@@ -30,13 +32,18 @@ class Photo {
   
   func loadThumbnail(){
     imageLoadFailed = false
-    if self.thumbnailURL == nil{
-      imageLoadFailed = true
-      return
+    var desiredURL = self.thumbnailURL
+    if desiredURL == nil{
+      desiredURL = self.fullImageURL
+      if desiredURL == nil{
+        imageLoadFailed = true
+        return
+      }
     }
+
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), {
       var readError: NSError?
-      let data = NSData(contentsOfURL:self.thumbnailURL!, options: nil, error: &readError)
+      let data = NSData(contentsOfURL:desiredURL!, options: nil, error: &readError)
       
       if let error = readError{
         self.imageLoadFailed = true
@@ -48,6 +55,18 @@ class Photo {
   }
   
   func attemptImageCache(){
+    if !isCached && thumbnailData != nil{
+      let tempDirectory = NSURL(fileURLWithPath: NSTemporaryDirectory(), isDirectory: true)
+
+      let cacheURL = tempDirectory.URLByAppendingPathComponent(photoID)
+    
+      let success = UIImagePNGRepresentation(thumbnailData).writeToURL(cacheURL, atomically: true)
+      
+      if(success){
+        thumbnailURL = cacheURL
+        isCached = true
+      }
+    }
     imageLoadFailed = false
     thumbnailData = nil
   }
