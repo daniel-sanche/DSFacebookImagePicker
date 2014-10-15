@@ -1,5 +1,5 @@
 //
-//  DSPhotoAlbum.swift
+//  PhotoAlbum.swift
 //  DSFacebookImagePicker
 //
 //  Created by Home on 2014-10-13.
@@ -7,7 +7,7 @@
 //
 
 
-class DSPhotoAlbum {
+class PhotoAlbum {
     let name : String
     let URL : NSURL
     let count : Int
@@ -25,13 +25,13 @@ class DSPhotoAlbum {
         imageLoadComplete = false
         
         //request cover image
-        self.recieveCoverImage()
+        recieveCoverImage()
 
     }
     
     func recieveCoverImage(){
         imageLoadComplete = false
-        let request = FBRequest(session: FBSession.activeSession(), graphPath:self.coverPhotoID)
+        let request = FBRequest(session: FBSession.activeSession(), graphPath:coverPhotoID)
         request.startWithCompletionHandler { (connection, result, error) -> Void in
         
             if error != nil{

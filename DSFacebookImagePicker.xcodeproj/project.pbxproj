@@ -8,19 +8,17 @@
 
 /* Begin PBXBuildFile section */
 		F44DDD0119EDEDA40059AB0D /* AlbumCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F44DDD0019EDEDA40059AB0D /* AlbumCell.swift */; };
-		F484A9D319EC98E2005C50D3 /* DSPhotoAlbum.swift in Sources */ = {isa = PBXBuildFile; fileRef = F484A9D219EC98E2005C50D3 /* DSPhotoAlbum.swift */; };
+		F484A9D319EC98E2005C50D3 /* PhotoAlbum.swift in Sources */ = {isa = PBXBuildFile; fileRef = F484A9D219EC98E2005C50D3 /* PhotoAlbum.swift */; };
 		F484A9D519ECDA16005C50D3 /* dirtblock.png in Resources */ = {isa = PBXBuildFile; fileRef = F484A9D419ECDA16005C50D3 /* dirtblock.png */; };
-		F4892FE819EDE73D000FB760 /* FBNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4892FE719EDE73D000FB760 /* FBNavigationController.swift */; };
+		F4892FE819EDE73D000FB760 /* FacebookNavController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4892FE719EDE73D000FB760 /* FacebookNavController.swift */; };
 		F4B8A3F519EC794700EE1EFE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4B8A3F419EC794700EE1EFE /* AppDelegate.swift */; };
 		F4B8A3F719EC794700EE1EFE /* AlbumListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4B8A3F619EC794700EE1EFE /* AlbumListViewController.swift */; };
-		F4B8A3F919EC794700EE1EFE /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4B8A3F819EC794700EE1EFE /* SecondViewController.swift */; };
 		F4B8A3FC19EC794700EE1EFE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F4B8A3FA19EC794700EE1EFE /* Main.storyboard */; };
 		F4B8A3FE19EC794700EE1EFE /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F4B8A3FD19EC794700EE1EFE /* Images.xcassets */; };
 		F4B8A40119EC794700EE1EFE /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = F4B8A3FF19EC794700EE1EFE /* LaunchScreen.xib */; };
 		F4B8A40D19EC794700EE1EFE /* DSFacebookImagePickerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4B8A40C19EC794700EE1EFE /* DSFacebookImagePickerTests.swift */; };
 		F4B8A41A19EC7A1D00EE1EFE /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F4B8A41919EC7A1D00EE1EFE /* FacebookSDK.framework */; };
-		F4B8A41C19EC7C8F00EE1EFE /* FBLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4B8A41B19EC7C8F00EE1EFE /* FBLoginViewController.swift */; };
-		F4B8A41E19EC84AF00EE1EFE /* DSFacebookNetworking.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4B8A41D19EC84AF00EE1EFE /* DSFacebookNetworking.swift */; };
+		F4B8A41E19EC84AF00EE1EFE /* FacebookNetworking.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4B8A41D19EC84AF00EE1EFE /* FacebookNetworking.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,14 +33,13 @@
 
 /* Begin PBXFileReference section */
 		F44DDD0019EDEDA40059AB0D /* AlbumCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AlbumCell.swift; path = ../AlbumCell.swift; sourceTree = "<group>"; };
-		F484A9D219EC98E2005C50D3 /* DSPhotoAlbum.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DSPhotoAlbum.swift; sourceTree = "<group>"; };
+		F484A9D219EC98E2005C50D3 /* PhotoAlbum.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoAlbum.swift; sourceTree = "<group>"; };
 		F484A9D419ECDA16005C50D3 /* dirtblock.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = dirtblock.png; sourceTree = "<group>"; };
-		F4892FE719EDE73D000FB760 /* FBNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FBNavigationController.swift; sourceTree = "<group>"; };
+		F4892FE719EDE73D000FB760 /* FacebookNavController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FacebookNavController.swift; sourceTree = "<group>"; };
 		F4B8A3EF19EC794700EE1EFE /* DSFacebookImagePicker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DSFacebookImagePicker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F4B8A3F319EC794700EE1EFE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F4B8A3F419EC794700EE1EFE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F4B8A3F619EC794700EE1EFE /* AlbumListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumListViewController.swift; sourceTree = "<group>"; };
-		F4B8A3F819EC794700EE1EFE /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
 		F4B8A3FB19EC794700EE1EFE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F4B8A3FD19EC794700EE1EFE /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		F4B8A40019EC794700EE1EFE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
@@ -51,8 +48,7 @@
 		F4B8A40C19EC794700EE1EFE /* DSFacebookImagePickerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DSFacebookImagePickerTests.swift; sourceTree = "<group>"; };
 		F4B8A41819EC79C500EE1EFE /* BridgingHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BridgingHeader.h; sourceTree = "<group>"; };
 		F4B8A41919EC7A1D00EE1EFE /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FacebookSDK.framework; sourceTree = "<group>"; };
-		F4B8A41B19EC7C8F00EE1EFE /* FBLoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FBLoginViewController.swift; sourceTree = "<group>"; };
-		F4B8A41D19EC84AF00EE1EFE /* DSFacebookNetworking.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DSFacebookNetworking.swift; sourceTree = "<group>"; };
+		F4B8A41D19EC84AF00EE1EFE /* FacebookNetworking.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FacebookNetworking.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,11 +93,9 @@
 			children = (
 				F4B8A3F419EC794700EE1EFE /* AppDelegate.swift */,
 				F4B8A3F619EC794700EE1EFE /* AlbumListViewController.swift */,
-				F4B8A3F819EC794700EE1EFE /* SecondViewController.swift */,
-				F4B8A41B19EC7C8F00EE1EFE /* FBLoginViewController.swift */,
-				F4892FE719EDE73D000FB760 /* FBNavigationController.swift */,
-				F4B8A41D19EC84AF00EE1EFE /* DSFacebookNetworking.swift */,
-				F484A9D219EC98E2005C50D3 /* DSPhotoAlbum.swift */,
+				F4892FE719EDE73D000FB760 /* FacebookNavController.swift */,
+				F4B8A41D19EC84AF00EE1EFE /* FacebookNetworking.swift */,
+				F484A9D219EC98E2005C50D3 /* PhotoAlbum.swift */,
 				F44DDD0019EDEDA40059AB0D /* AlbumCell.swift */,
 				F4B8A3FA19EC794700EE1EFE /* Main.storyboard */,
 				F4B8A3FD19EC794700EE1EFE /* Images.xcassets */,
@@ -240,13 +234,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F4B8A3F919EC794700EE1EFE /* SecondViewController.swift in Sources */,
-				F484A9D319EC98E2005C50D3 /* DSPhotoAlbum.swift in Sources */,
-				F4B8A41E19EC84AF00EE1EFE /* DSFacebookNetworking.swift in Sources */,
+				F484A9D319EC98E2005C50D3 /* PhotoAlbum.swift in Sources */,
+				F4B8A41E19EC84AF00EE1EFE /* FacebookNetworking.swift in Sources */,
 				F44DDD0119EDEDA40059AB0D /* AlbumCell.swift in Sources */,
-				F4892FE819EDE73D000FB760 /* FBNavigationController.swift in Sources */,
+				F4892FE819EDE73D000FB760 /* FacebookNavController.swift in Sources */,
 				F4B8A3F519EC794700EE1EFE /* AppDelegate.swift in Sources */,
-				F4B8A41C19EC7C8F00EE1EFE /* FBLoginViewController.swift in Sources */,
 				F4B8A3F719EC794700EE1EFE /* AlbumListViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

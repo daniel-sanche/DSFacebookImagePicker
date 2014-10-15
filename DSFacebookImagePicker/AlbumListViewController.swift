@@ -12,7 +12,7 @@ import UIKit
 
 class AlbumListViewController: UITableViewController {
 
-    var albumList : [DSPhotoAlbum]? = nil
+    var albumList : [PhotoAlbum]? = nil
     let rowHeight = 65 as CGFloat
     
 
@@ -26,7 +26,7 @@ class AlbumListViewController: UITableViewController {
         
         
         if albumList == nil{
-            DSFacebookNetworking.getAlbumList({ (album, error) in
+            FacebookNetworking.getAlbumList({ (album, error) in
                 if album != nil {
                     self.albumList = album!
                     self.tableView.reloadData()
@@ -34,11 +34,11 @@ class AlbumListViewController: UITableViewController {
             })
         }
 
-        self.tableView.reloadData()
+        tableView.reloadData()
     }
     
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-        return 1;
+        return 1
     }
     
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -53,12 +53,12 @@ class AlbumListViewController: UITableViewController {
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         
-        if let list = self.albumList{
+        if albumList != nil{
         
             let cell = tableView.dequeueReusableCellWithIdentifier("AlbumCell", forIndexPath:indexPath) as AlbumCell
-            let thisAlbum = self.albumList?[indexPath.row]
+            let thisAlbum = albumList?[indexPath.row]
             cell.setUpWithAlbum(thisAlbum!)
-            return cell;
+            return cell
         } else {
             let placeholder = tableView.dequeueReusableCellWithIdentifier("PlaceholderCell", forIndexPath:indexPath) as UITableViewCell
             return placeholder

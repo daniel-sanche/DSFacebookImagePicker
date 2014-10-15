@@ -1,5 +1,5 @@
 //
-//  DSFacebookNetworking.swift
+//  FacebookNetworking.swift
 //  DSFacebookImagePicker
 //
 //  Created by Home on 2014-10-13.
@@ -8,21 +8,21 @@
 
 import UIKit
 
-class DSFacebookNetworking: NSObject {
+class FacebookNetworking: NSObject {
     
     
-     class func getAlbumList(completionHandler:([DSPhotoAlbum]?, NSError?)->()){
+     class func getAlbumList(completionHandler:([PhotoAlbum]?, NSError?)->()){
     
         //attempt log in
         if(!isLoggedIn()){
             logIn({ (session, error) -> Void in
                 if error != nil{
-                    completionHandler(nil, error);
+                    completionHandler(nil, error)
                 } else {
                     self.getAlbumList(completionHandler)
                 }
             })
-            return;
+            return
         }
     
     
@@ -32,10 +32,10 @@ class DSFacebookNetworking: NSObject {
         if let json = result as? NSDictionary{
             
             
-            var albumList = [DSPhotoAlbum]()
+            var albumList = [PhotoAlbum]()
             
             for thisAlbumDict in json.objectForKey("data") as NSArray{
-                let newAlbum = DSPhotoAlbum(json:thisAlbumDict as NSDictionary)
+                let newAlbum = PhotoAlbum(json:thisAlbumDict as NSDictionary)
                 albumList.append(newAlbum)
             }
             
@@ -57,7 +57,7 @@ class DSFacebookNetworking: NSObject {
         
         let currentPermissions : [String] = FBSession.activeSession().permissions as [String]
         
-        let requiredPerimissions = ["user_photos"];
+        let requiredPerimissions = ["user_photos"]
         
         for thisPermission in requiredPerimissions{
             if(!contains(currentPermissions, thisPermission)){
@@ -67,7 +67,7 @@ class DSFacebookNetworking: NSObject {
         if(permissions.isEmpty){
             return nil
         } else {
-            println(permissions);
+            println(permissions)
             return permissions
         }
     }
@@ -75,11 +75,11 @@ class DSFacebookNetworking: NSObject {
     class func isLoggedIn() -> Bool{
         let session = FBSession.activeSession()
         if(!session.isOpen){
-            return false;
+            return false
         } else if missingPermissions() != nil{
             return false
         } else {
-            return true;
+            return true
         }
     }
     
@@ -92,7 +92,7 @@ class DSFacebookNetworking: NSObject {
                 FBSession.activeSession().requestNewReadPermissions(permissions, handler)
             }
         } else {
-            FBSession.openActiveSessionWithReadPermissions(missingPermissions(), allowLoginUI:true, completionHandler: { (session, state, error) -> Void in
+            FBSession.openActiveSessionWithReadPermissions(missingPermissions(), allowLoginUI:true, completionHandler: { session, state, error in
                 handler(session, error)
             })
         }
