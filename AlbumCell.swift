@@ -14,7 +14,7 @@ class AlbumCell: UITableViewCell {
   @IBOutlet weak var titleLabel: UILabel!
   
   override func prepareForReuse() {
-    coverImageView?.image = UIImage(named:"dirtblock")
+    coverImageView?.image = UIImage(named:"albumPlaceholder")
   }
   
   func setUpWithAlbum(album:PhotoAlbum){

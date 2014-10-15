@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F42239B519EF37810092BCEA /* albumPlaceholder@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F42239B419EF37810092BCEA /* albumPlaceholder@2x.png */; };
 		F44DDD0119EDEDA40059AB0D /* AlbumCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F44DDD0019EDEDA40059AB0D /* AlbumCell.swift */; };
 		F44DDD0319EDFFC40059AB0D /* PhotoCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F44DDD0219EDFFC40059AB0D /* PhotoCollectionViewController.swift */; };
 		F44DDD0519EE2B8C0059AB0D /* Photo.swift in Sources */ = {isa = PBXBuildFile; fileRef = F44DDD0419EE2B8C0059AB0D /* Photo.swift */; };
@@ -36,6 +37,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		F42239B419EF37810092BCEA /* albumPlaceholder@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "albumPlaceholder@2x.png"; sourceTree = "<group>"; };
 		F44DDD0019EDEDA40059AB0D /* AlbumCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AlbumCell.swift; path = ../AlbumCell.swift; sourceTree = "<group>"; };
 		F44DDD0219EDFFC40059AB0D /* PhotoCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoCollectionViewController.swift; sourceTree = "<group>"; };
 		F44DDD0419EE2B8C0059AB0D /* Photo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Photo.swift; sourceTree = "<group>"; };
@@ -114,6 +116,7 @@
 				F4B8A3FF19EC794700EE1EFE /* LaunchScreen.xib */,
 				F4B8A41819EC79C500EE1EFE /* BridgingHeader.h */,
 				F484A9D419ECDA16005C50D3 /* dirtblock.png */,
+				F42239B419EF37810092BCEA /* albumPlaceholder@2x.png */,
 				F4B8A41919EC7A1D00EE1EFE /* FacebookSDK.framework */,
 				F4B8A3F219EC794700EE1EFE /* Supporting Files */,
 			);
@@ -226,6 +229,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F4B8A3FC19EC794700EE1EFE /* Main.storyboard in Resources */,
+				F42239B519EF37810092BCEA /* albumPlaceholder@2x.png in Resources */,
 				F4B8A40119EC794700EE1EFE /* LaunchScreen.xib in Resources */,
 				F484A9D519ECDA16005C50D3 /* dirtblock.png in Resources */,
 				F4B8A3FE19EC794700EE1EFE /* Images.xcassets in Resources */,

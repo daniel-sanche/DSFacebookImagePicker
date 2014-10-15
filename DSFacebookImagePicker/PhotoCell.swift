@@ -17,8 +17,8 @@ class PhotoCell: UICollectionViewCell {
     if let thisPhoto = associatedPhoto{
       thisPhoto.attemptImageCache()
     }
+    imageView?.image = nil
     associatedPhoto = nil
-    imageView?.image = UIImage(named:"dirtblock")
   }
   
   func setUpWithPhoto(thisPhoto:Photo){
