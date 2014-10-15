@@ -11,16 +11,22 @@ import UIKit
 class PhotoCollectionViewController:  UICollectionViewController, UICollectionViewDelegateFlowLayout {
   
   var photoList : [Photo]? = nil
-  
-  
-  override func viewDidLoad() {
-    FacebookNetworking.getImagesFromAlbumID("10152831646314772", photoCount:100, { result, error in
-      if result != nil {
-        self.photoList = result!
-        self.collectionView?.reloadData()
-      }
-    })
+  var albumID : String? {
+    didSet{self.fetchData()}
   }
+  
+  
+  func fetchData(){
+    if let newID = albumID{
+      FacebookNetworking.getImagesFromAlbumID(newID, photoCount:1000, { result, error in
+        if result != nil {
+          self.photoList = result!
+          self.collectionView?.reloadData()
+        }
+      })
+    }
+  }
+
   
   // MARK: UICollectionViewDataSource
   
