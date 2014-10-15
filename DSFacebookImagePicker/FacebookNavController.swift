@@ -1,5 +1,5 @@
 //
-//  FBNavigationController.swift
+//  FacebookNavController.swift
 //  DSFacebookImagePicker
 //
 //  Created by Home on 2014-10-13.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class FBNavigationController: UINavigationController {
+class FacebookNavController: UINavigationController {
 
     override func preferredStatusBarStyle() -> UIStatusBarStyle {
         return UIStatusBarStyle.LightContent
