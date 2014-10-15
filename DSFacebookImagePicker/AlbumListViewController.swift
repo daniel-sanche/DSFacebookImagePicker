@@ -72,6 +72,26 @@ class AlbumListViewController: UITableViewController {
     return rowHeight
   }
   
+  override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+    let thisAlbum = albumList![indexPath.row]
+    
+    self .performSegueWithIdentifier("AlbumDetail", sender: thisAlbum)
+  }
+  
+  override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+    let segueID = segue.identifier
+    
+    if(segueID == "AlbumDetail"){
+      let thisAlbum = sender as PhotoAlbum
+      let dest = segue.destinationViewController as PhotoCollectionViewController
+      dest.placeHolderNumber = thisAlbum.count
+      dest.albumID = thisAlbum.albumID
+      dest.title = thisAlbum.name
+    }
+    
+    
+  }
+  
   
   
 }

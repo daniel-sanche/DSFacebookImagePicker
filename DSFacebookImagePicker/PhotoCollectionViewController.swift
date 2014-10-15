@@ -9,10 +9,16 @@
 import UIKit
 
 class PhotoCollectionViewController:  UICollectionViewController, UICollectionViewDelegateFlowLayout {
-  
   var photoList : [Photo]? = nil
   var albumID : String? {
-    didSet{self.fetchData()}
+    didSet{
+      fetchData()
+    }
+  }
+  var placeHolderNumber : Int = 30{
+    didSet{
+      collectionView?.reloadData()
+    }
   }
   
   
@@ -36,8 +42,6 @@ class PhotoCollectionViewController:  UICollectionViewController, UICollectionVi
   
   
   override func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-    let placeHolderNumber = 30
-  
     if let photoCount = photoList?.count{
       return photoCount
     } else {
