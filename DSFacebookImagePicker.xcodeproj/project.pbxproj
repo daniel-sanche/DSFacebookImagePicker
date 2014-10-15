@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		F44DDD0119EDEDA40059AB0D /* AlbumCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F44DDD0019EDEDA40059AB0D /* AlbumCell.swift */; };
+		F44DDD0319EDFFC40059AB0D /* PhotoCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F44DDD0219EDFFC40059AB0D /* PhotoCollectionViewController.swift */; };
+		F44DDD0519EE2B8C0059AB0D /* Photo.swift in Sources */ = {isa = PBXBuildFile; fileRef = F44DDD0419EE2B8C0059AB0D /* Photo.swift */; };
+		F44DDD0719EE3A540059AB0D /* PhotoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F44DDD0619EE3A540059AB0D /* PhotoCell.swift */; };
+		F44DDD0919EE47280059AB0D /* MyPhotosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F44DDD0819EE47280059AB0D /* MyPhotosViewController.swift */; };
 		F484A9D319EC98E2005C50D3 /* PhotoAlbum.swift in Sources */ = {isa = PBXBuildFile; fileRef = F484A9D219EC98E2005C50D3 /* PhotoAlbum.swift */; };
 		F484A9D519ECDA16005C50D3 /* dirtblock.png in Resources */ = {isa = PBXBuildFile; fileRef = F484A9D419ECDA16005C50D3 /* dirtblock.png */; };
 		F4892FE819EDE73D000FB760 /* FacebookNavController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4892FE719EDE73D000FB760 /* FacebookNavController.swift */; };
@@ -33,6 +37,10 @@
 
 /* Begin PBXFileReference section */
 		F44DDD0019EDEDA40059AB0D /* AlbumCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AlbumCell.swift; path = ../AlbumCell.swift; sourceTree = "<group>"; };
+		F44DDD0219EDFFC40059AB0D /* PhotoCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoCollectionViewController.swift; sourceTree = "<group>"; };
+		F44DDD0419EE2B8C0059AB0D /* Photo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Photo.swift; sourceTree = "<group>"; };
+		F44DDD0619EE3A540059AB0D /* PhotoCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoCell.swift; sourceTree = "<group>"; };
+		F44DDD0819EE47280059AB0D /* MyPhotosViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyPhotosViewController.swift; sourceTree = "<group>"; };
 		F484A9D219EC98E2005C50D3 /* PhotoAlbum.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoAlbum.swift; sourceTree = "<group>"; };
 		F484A9D419ECDA16005C50D3 /* dirtblock.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = dirtblock.png; sourceTree = "<group>"; };
 		F4892FE719EDE73D000FB760 /* FacebookNavController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FacebookNavController.swift; sourceTree = "<group>"; };
@@ -95,9 +103,13 @@
 				F4B8A3F619EC794700EE1EFE /* AlbumListViewController.swift */,
 				F4892FE719EDE73D000FB760 /* FacebookNavController.swift */,
 				F4B8A41D19EC84AF00EE1EFE /* FacebookNetworking.swift */,
+				F44DDD0419EE2B8C0059AB0D /* Photo.swift */,
 				F484A9D219EC98E2005C50D3 /* PhotoAlbum.swift */,
+				F44DDD0619EE3A540059AB0D /* PhotoCell.swift */,
 				F44DDD0019EDEDA40059AB0D /* AlbumCell.swift */,
 				F4B8A3FA19EC794700EE1EFE /* Main.storyboard */,
+				F44DDD0219EDFFC40059AB0D /* PhotoCollectionViewController.swift */,
+				F44DDD0819EE47280059AB0D /* MyPhotosViewController.swift */,
 				F4B8A3FD19EC794700EE1EFE /* Images.xcassets */,
 				F4B8A3FF19EC794700EE1EFE /* LaunchScreen.xib */,
 				F4B8A41819EC79C500EE1EFE /* BridgingHeader.h */,
@@ -234,8 +246,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F44DDD0519EE2B8C0059AB0D /* Photo.swift in Sources */,
+				F44DDD0719EE3A540059AB0D /* PhotoCell.swift in Sources */,
 				F484A9D319EC98E2005C50D3 /* PhotoAlbum.swift in Sources */,
+				F44DDD0919EE47280059AB0D /* MyPhotosViewController.swift in Sources */,
 				F4B8A41E19EC84AF00EE1EFE /* FacebookNetworking.swift in Sources */,
+				F44DDD0319EDFFC40059AB0D /* PhotoCollectionViewController.swift in Sources */,
 				F44DDD0119EDEDA40059AB0D /* AlbumCell.swift in Sources */,
 				F4892FE819EDE73D000FB760 /* FacebookNavController.swift in Sources */,
 				F4B8A3F519EC794700EE1EFE /* AppDelegate.swift in Sources */,
