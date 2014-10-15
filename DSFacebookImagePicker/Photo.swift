@@ -47,4 +47,9 @@ class Photo {
     })
   }
   
+  func attemptImageCache(){
+    imageLoadFailed = false
+    thumbnailData = nil
+  }
+  
 }

@@ -11,14 +11,20 @@ import UIKit
 class PhotoCell: UICollectionViewCell {
   
   @IBOutlet weak var imageView: UIImageView!
+  var associatedPhoto : Photo?
   
   override func prepareForReuse() {
+    if let thisPhoto = associatedPhoto{
+      thisPhoto.attemptImageCache()
+    }
+    associatedPhoto = nil
     imageView?.image = UIImage(named:"dirtblock")
   }
   
-  func setUpWithPhoto(photo:Photo){
-    photo.loadThumbnail()
-    setImage(photo)
+  func setUpWithPhoto(thisPhoto:Photo){
+    associatedPhoto = thisPhoto
+    thisPhoto.loadThumbnail()
+    setImage(thisPhoto)
   }
   
   func setImage(photo:Photo){
