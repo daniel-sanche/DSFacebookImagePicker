@@ -17,18 +17,18 @@ class AlbumCell: UITableViewCell {
     
 
     func setUpWithAlbum(album:DSPhotoAlbum){
-        self.titleLabel?.text = album.name
+        titleLabel?.text = album.name
         
-        self.setImage(album)
+        setImage(album)
     }
     
     func setImage(album:DSPhotoAlbum){
         
 
         if let foundPhoto = album.coverPhoto{
-            self.coverImageView?.image = foundPhoto;
-        } else if self.coverImageView?.image == nil{
-            self.coverImageView?.image = UIImage(named:"dirtblock");
+            coverImageView?.image = foundPhoto;
+        } else if coverImageView?.image == nil{
+            coverImageView?.image = UIImage(named:"dirtblock");
         }
         
         if !album.imageLoadComplete {

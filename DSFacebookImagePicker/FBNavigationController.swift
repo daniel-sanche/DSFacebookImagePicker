@@ -15,8 +15,8 @@ class FBNavigationController: UINavigationController {
     }
     
     override func viewDidLoad() {
-        self.setNeedsStatusBarAppearanceUpdate();
-        self.navigationBar.tintColor = UIColor(white: 1, alpha: 1)
+        setNeedsStatusBarAppearanceUpdate();
+        navigationBar.tintColor = UIColor(white: 1, alpha: 1)
     }
 
 }

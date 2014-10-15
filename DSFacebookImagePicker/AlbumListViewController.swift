@@ -34,7 +34,7 @@ class AlbumListViewController: UITableViewController {
             })
         }
 
-        self.tableView.reloadData()
+        tableView.reloadData()
     }
     
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
@@ -53,10 +53,10 @@ class AlbumListViewController: UITableViewController {
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         
-        if let list = self.albumList{
+        if albumList != nil{
         
             let cell = tableView.dequeueReusableCellWithIdentifier("AlbumCell", forIndexPath:indexPath) as AlbumCell
-            let thisAlbum = self.albumList?[indexPath.row]
+            let thisAlbum = albumList?[indexPath.row]
             cell.setUpWithAlbum(thisAlbum!)
             return cell;
         } else {
