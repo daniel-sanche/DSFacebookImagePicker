@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6245" systemVersion="14A388a" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="49e-Tb-3d3">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6238"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--My Albums-->
@@ -13,19 +14,62 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="AlbumCell" textLabel="JOk-JF-8jh" rowHeight="65" style="IBUITableViewCellStyleDefault" id="4HO-hB-RcT">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="AlbumCell" rowHeight="65" id="4HO-hB-RcT" customClass="AlbumCell" customModule="DSFacebookImagePicker" customModuleProvider="target">
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="4HO-hB-RcT" id="vOS-6c-ML7">
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="JOk-JF-8jh">
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="cw6-JV-kTg">
+                                            <rect key="frame" x="15" y="5" width="65" height="55"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="55" id="HAa-24-MHX"/>
+                                                <constraint firstAttribute="width" constant="65" id="znH-c8-nGU"/>
+                                            </constraints>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Mr-dA-viR">
+                                            <rect key="frame" x="147" y="5" width="445" height="50"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="50" id="Dvf-nV-lVW"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
+                                    <constraints>
+                                        <constraint firstItem="8Mr-dA-viR" firstAttribute="leading" secondItem="cw6-JV-kTg" secondAttribute="trailing" constant="31" id="3QS-yU-r19"/>
+                                        <constraint firstItem="8Mr-dA-viR" firstAttribute="trailing" secondItem="vOS-6c-ML7" secondAttribute="trailingMargin" id="6BR-SE-Z6q"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="8Mr-dA-viR" secondAttribute="bottom" constant="2" id="F0E-8d-aek"/>
+                                        <constraint firstItem="cw6-JV-kTg" firstAttribute="leading" secondItem="vOS-6c-ML7" secondAttribute="leadingMargin" constant="7" id="Vts-9e-8MO"/>
+                                        <constraint firstAttribute="centerY" secondItem="cw6-JV-kTg" secondAttribute="centerY" id="fh5-t9-tMP"/>
+                                    </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="coverImageView" destination="cw6-JV-kTg" id="ML9-YD-GVZ"/>
+                                    <outlet property="titleLabel" destination="8Mr-dA-viR" id="h8c-90-k63"/>
+                                </connections>
+                            </tableViewCell>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="PlaceholderCell" rowHeight="65" id="nvk-Ly-nG4" customClass="AlbumCell" customModule="DSFacebookImagePicker" customModuleProvider="target">
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="nvk-Ly-nG4" id="iRI-TN-BcT">
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dirtblock.png" translatesAutoresizingMaskIntoConstraints="NO" id="43h-Vd-jE9">
+                                            <rect key="frame" x="15" y="5" width="65" height="55"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="55" id="Kn1-NI-73u"/>
+                                                <constraint firstAttribute="width" constant="65" id="Xc9-nl-IrU"/>
+                                            </constraints>
+                                        </imageView>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="centerY" secondItem="43h-Vd-jE9" secondAttribute="centerY" id="Kip-6T-Q1y"/>
+                                        <constraint firstItem="43h-Vd-jE9" firstAttribute="leading" secondItem="iRI-TN-BcT" secondAttribute="leadingMargin" constant="7" id="m2K-NI-MAa"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="coverImageView" destination="43h-Vd-jE9" id="WJS-mv-AUM"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -42,7 +86,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="g6F-pm-qlZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1498" y="-228"/>
+            <point key="canvasLocation" x="1498" y="-236"/>
         </scene>
         <!--Second-->
         <scene sceneID="wg7-f3-ORb">
@@ -171,6 +215,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="dirtblock.png" width="101" height="113"/>
         <image name="second" width="30" height="30"/>
     </resources>
 </document>

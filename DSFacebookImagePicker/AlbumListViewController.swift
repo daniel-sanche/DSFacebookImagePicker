@@ -12,7 +12,7 @@ import UIKit
 
 class AlbumListViewController: UITableViewController {
 
-    var albumList : [DSPhotoAlbum] = [DSPhotoAlbum]()
+    var albumList : [DSPhotoAlbum]? = nil
     let rowHeight = 65 as CGFloat
     
 
@@ -25,7 +25,7 @@ class AlbumListViewController: UITableViewController {
         super.viewDidAppear(animated)
         
         
-        if(albumList.count==0){
+        if albumList == nil{
             DSFacebookNetworking.getAlbumList({ (album, error) in
                 if album != nil {
                     self.albumList = album!
@@ -42,18 +42,27 @@ class AlbumListViewController: UITableViewController {
     }
     
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-
-        return albumList.count;
+        let placeHolderNumber = 10
+        
+        if let albumCount = albumList?.count{
+            return albumCount
+        } else {
+            return placeHolderNumber
+        }
     }
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("AlbumCell", forIndexPath:indexPath) as UITableViewCell
         
-        let thisAlbum = self.albumList[indexPath.row]
-        cell.textLabel?.text = thisAlbum.name
-        cell.imageView?.image = thisAlbum.coverPhoto
+        if let list = self.albumList{
         
-        return cell;
+            let cell = tableView.dequeueReusableCellWithIdentifier("AlbumCell", forIndexPath:indexPath) as AlbumCell
+            let thisAlbum = self.albumList?[indexPath.row]
+            cell.setUpWithAlbum(thisAlbum!)
+            return cell;
+        } else {
+            let placeholder = tableView.dequeueReusableCellWithIdentifier("PlaceholderCell", forIndexPath:indexPath) as UITableViewCell
+            return placeholder
+        }
     }
     
     override func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
