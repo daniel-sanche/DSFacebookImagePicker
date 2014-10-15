@@ -1,5 +1,5 @@
 //
-//  DSFacebookNetworking.swift
+//  FacebookNetworking.swift
 //  DSFacebookImagePicker
 //
 //  Created by Home on 2014-10-13.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class DSFacebookNetworking: NSObject {
+class FacebookNetworking: NSObject {
     
     
      class func getAlbumList(completionHandler:([PhotoAlbum]?, NSError?)->()){

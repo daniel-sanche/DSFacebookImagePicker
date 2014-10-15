@@ -26,7 +26,7 @@ class AlbumListViewController: UITableViewController {
         
         
         if albumList == nil{
-            DSFacebookNetworking.getAlbumList({ (album, error) in
+            FacebookNetworking.getAlbumList({ (album, error) in
                 if album != nil {
                     self.albumList = album!
                     self.tableView.reloadData()
