@@ -31,7 +31,7 @@ class AlbumCell: UITableViewCell {
             coverImageView?.image = UIImage(named:"dirtblock")
         }
         
-        if !album.imageLoadComplete {
+        if !album.imageLoadFailed {
             
             let delay = 0.1 * Double(NSEC_PER_SEC)
             let time = dispatch_time(DISPATCH_TIME_NOW, Int64(delay))
