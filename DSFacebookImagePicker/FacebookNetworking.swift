@@ -17,12 +17,12 @@ class FacebookNetworking: NSObject {
         if(!isLoggedIn()){
             logIn({ (session, error) -> Void in
                 if error != nil{
-                    completionHandler(nil, error);
+                    completionHandler(nil, error)
                 } else {
                     self.getAlbumList(completionHandler)
                 }
             })
-            return;
+            return
         }
     
     
@@ -57,7 +57,7 @@ class FacebookNetworking: NSObject {
         
         let currentPermissions : [String] = FBSession.activeSession().permissions as [String]
         
-        let requiredPerimissions = ["user_photos"];
+        let requiredPerimissions = ["user_photos"]
         
         for thisPermission in requiredPerimissions{
             if(!contains(currentPermissions, thisPermission)){
@@ -67,7 +67,7 @@ class FacebookNetworking: NSObject {
         if(permissions.isEmpty){
             return nil
         } else {
-            println(permissions);
+            println(permissions)
             return permissions
         }
     }
@@ -75,11 +75,11 @@ class FacebookNetworking: NSObject {
     class func isLoggedIn() -> Bool{
         let session = FBSession.activeSession()
         if(!session.isOpen){
-            return false;
+            return false
         } else if missingPermissions() != nil{
             return false
         } else {
-            return true;
+            return true
         }
     }
     
@@ -92,7 +92,7 @@ class FacebookNetworking: NSObject {
                 FBSession.activeSession().requestNewReadPermissions(permissions, handler)
             }
         } else {
-            FBSession.openActiveSessionWithReadPermissions(missingPermissions(), allowLoginUI:true, completionHandler: { (session, state, error) -> Void in
+            FBSession.openActiveSessionWithReadPermissions(missingPermissions(), allowLoginUI:true, completionHandler: { session, state, error in
                 handler(session, error)
             })
         }

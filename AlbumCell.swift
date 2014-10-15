@@ -26,9 +26,9 @@ class AlbumCell: UITableViewCell {
         
 
         if let foundPhoto = album.coverPhoto{
-            coverImageView?.image = foundPhoto;
+            coverImageView?.image = foundPhoto
         } else if coverImageView?.image == nil{
-            coverImageView?.image = UIImage(named:"dirtblock");
+            coverImageView?.image = UIImage(named:"dirtblock")
         }
         
         if !album.imageLoadComplete {
