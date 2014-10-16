@@ -13,15 +13,20 @@ class PhotoCell: UICollectionViewCell {
   @IBOutlet weak var imageView: UIImageView!
   var associatedPhoto : Photo?
   
+  
   override func prepareForReuse() {
+    super.prepareForReuse()
     if let thisPhoto = associatedPhoto{
       thisPhoto.attemptImageCache()
     }
     imageView?.image = nil
     associatedPhoto = nil
-  }
+}
+  
+  
   
   func setUpWithPhoto(thisPhoto:Photo){
+    imageView?.image = nil
     associatedPhoto = thisPhoto
     thisPhoto.loadThumbnail()
     setImage(thisPhoto)

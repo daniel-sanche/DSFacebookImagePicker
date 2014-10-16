@@ -21,9 +21,19 @@ class PhotoDetailViewController: UIViewController {
   var selectedPhoto : Photo?
   var imageState = LargePhotoState.Loading
   
+  
   override func viewDidLoad() {
     super.viewDidLoad()
-    imageView.image = selectedPhoto?.thumbnailData
+    
+    let app = UIApplication.sharedApplication()
+    app.networkActivityIndicatorVisible = true
+    
+    if let thumbnail = selectedPhoto?.thumbnailData{
+      imageView.image = selectedPhoto?.thumbnailData
+    } else if let thumbnailURL = selectedPhoto?.thumbnailURL {
+      self.loadThumbnailImage(thumbnailURL)
+    }
+    
   
     if let imageURL = selectedPhoto?.fullImageURL{
       loadFullImage(imageURL)
@@ -32,15 +42,36 @@ class PhotoDetailViewController: UIViewController {
   
   
   func loadFullImage(imageURL:NSURL){
-    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), {
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_HIGH, 0), {
       var readError: NSError?
       let data = NSData(contentsOfURL:imageURL, options: nil, error: &readError)
       
+      let app = UIApplication.sharedApplication()
+
+      
       if let error = readError{
         self.imageState = LargePhotoState.Failed
+        app.networkActivityIndicatorVisible = false
       } else {
-        self.imageView.image = UIImage(data:data)
-        self.imageState = LargePhotoState.Active
+        dispatch_async(dispatch_get_main_queue(), { () in
+          println("recieved full image")
+          self.imageView.image = UIImage(data:data)
+          self.imageState = LargePhotoState.Active
+          app.networkActivityIndicatorVisible = false
+        })
+      }
+    })
+  }
+  
+  func loadThumbnailImage(imageURL:NSURL){
+    println("loading thumbnail: \(imageURL)")
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_HIGH, 0), {
+      var readError: NSError?
+      let data = NSData(contentsOfURL:imageURL, options: nil, error: &readError)
+      if readError == nil && self.imageView.image==nil{
+        dispatch_async(dispatch_get_main_queue(), { () in
+          self.imageView.image = UIImage(data:data)
+        })
       }
     })
   }

@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6245" systemVersion="14A388a" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="49e-Tb-3d3">
     <dependencies>
+        <deployment defaultVersion="1792" identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6238"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
@@ -332,7 +333,6 @@
                                 <color key="backgroundColor" red="0.2233184677" green="0.44654898850000002" blue="0.89194147099999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstItem="CB8-x7-Khd" firstAttribute="leading" secondItem="mGZ-th-dhB" secondAttribute="leading" constant="45" id="6J1-Jg-Iam"/>
-                                    <constraint firstAttribute="height" constant="65" id="LEE-yN-yuV"/>
                                     <constraint firstAttribute="centerY" secondItem="CB8-x7-Khd" secondAttribute="centerY" id="Sfn-8k-3yA"/>
                                     <constraint firstAttribute="trailing" secondItem="kLZ-o4-uZ9" secondAttribute="trailing" constant="45" id="XF5-dV-krN"/>
                                     <constraint firstAttribute="centerY" secondItem="kLZ-o4-uZ9" secondAttribute="centerY" id="lDg-Bg-cet"/>
