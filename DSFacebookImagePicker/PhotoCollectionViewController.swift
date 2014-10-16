@@ -9,6 +9,7 @@
 import UIKit
 
 class PhotoCollectionViewController:  UICollectionViewController, UICollectionViewDelegateFlowLayout {
+  let PhotoSelectedSegue = "SelectPhoto"
   var photoList : [Photo]? = nil
   var albumID : String? {
     didSet{
@@ -71,6 +72,22 @@ class PhotoCollectionViewController:  UICollectionViewController, UICollectionVi
     return CGSize(width: quarterWidth-3, height: quarterWidth*1.3)
     
   }
+  
+  override func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
+    if let selected = photoList?[indexPath.row]{
+      self.performSegueWithIdentifier(PhotoSelectedSegue, sender: selected)
+    }
+  }
+  
+  override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+    let identifier = segue.identifier
+    if(identifier == PhotoSelectedSegue){
+      let dest = segue.destinationViewController.topViewController as PhotoDetailViewController
+      dest.selectedPhoto = sender as? Photo
+    }
+  }
+  
+  
   
   
 }

@@ -16,7 +16,6 @@ class PhotoAlbum {
     var imageLoadFailed : Bool
     
     init(json:NSDictionary) {
-        println(json)
         name = json["name"] as String
         albumID = json["id"] as String
         count = json["count"] as Int

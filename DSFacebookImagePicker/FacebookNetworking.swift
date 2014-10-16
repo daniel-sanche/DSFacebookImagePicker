@@ -58,14 +58,6 @@ class FacebookNetworking: NSObject {
       
       if let json = result as? NSDictionary{
         
-        /*
-        if let nextString = json["paging"]!["next"] as String?{
-          let nextUrl = NSURL(string: nextString)
-          println(nextUrl)
-          let nextJson = NSDictionary(contentsOfURL:nextUrl)
-          
-        }*/
-        
         var photoList = [Photo]()
         
         for thisPhotoDict in json["data"] as NSArray {
@@ -99,7 +91,6 @@ class FacebookNetworking: NSObject {
     if(permissions.isEmpty){
       return nil
     } else {
-      println(permissions)
       return permissions
     }
   }
@@ -140,6 +131,11 @@ class FacebookNetworking: NSObject {
         let URLString = thisDict["source"] as String
         return NSURL(string:URLString)
       }
+    }
+    
+    if let largest = sortedArray.last {
+      let URLString = largest["source"] as String
+      return NSURL(string:URLString)
     }
     return nil
   }
