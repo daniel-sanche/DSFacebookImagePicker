@@ -27,7 +27,7 @@ class Photo {
     
     let imageArray = json["images"] as NSArray
     thumbnailURL = FacebookNetworking.findBestImageURL(imageArray, minImageSize:Int.min)
-    fullImageURL = FacebookNetworking.findBestImageURL(imageArray, minImageSize:fullImageSize)    
+    fullImageURL = FacebookNetworking.findBestImageURL(imageArray, minImageSize:fullImageSize)
   }
   
   func loadThumbnail(){
@@ -48,7 +48,7 @@ class Photo {
       if let error = readError{
         self.imageLoadFailed = true
       } else {
-          self.thumbnailData = UIImage(data:data)
+        self.thumbnailData = UIImage(data:data)
       }
       
     })

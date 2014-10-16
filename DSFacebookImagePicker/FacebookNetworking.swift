@@ -141,6 +141,11 @@ class FacebookNetworking: NSObject {
         return NSURL(string:URLString)
       }
     }
+    
+    if let largest = sortedArray.last {
+      let URLString = largest["source"] as String
+      return NSURL(string:URLString)
+    }
     return nil
   }
   
