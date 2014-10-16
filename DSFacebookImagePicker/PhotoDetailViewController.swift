@@ -54,7 +54,6 @@ class PhotoDetailViewController: UIViewController {
         app.networkActivityIndicatorVisible = false
       } else {
         dispatch_async(dispatch_get_main_queue(), { () in
-          println("recieved full image")
           self.imageView.image = UIImage(data:data)
           self.imageState = LargePhotoState.Active
           app.networkActivityIndicatorVisible = false
@@ -64,7 +63,6 @@ class PhotoDetailViewController: UIViewController {
   }
   
   func loadThumbnailImage(imageURL:NSURL){
-    println("loading thumbnail: \(imageURL)")
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_HIGH, 0), {
       var readError: NSError?
       let data = NSData(contentsOfURL:imageURL, options: nil, error: &readError)
