@@ -8,9 +8,23 @@
 
 import UIKit
 
-class TestViewController: UIViewController {
+class TestViewController: UIViewController, FacebookImagePickerDelegate {
+  
+  @IBOutlet weak var imageView: UIImageView!
 
   @IBAction func launchPhotoPicker(sender: AnyObject) {
+    let picker = DSFacebookImagePicker.picker()
+    picker.imagePickerDelegate = self
+    presentViewController(picker, animated: true, completion: nil)
+  }
+  
+  func facebookImagePickerDidCancel(picker: DSFacebookImagePicker) {
+    dismissViewControllerAnimated(true, completion: nil)
+  }
+  
+  func facebookImagePicker(picker: DSFacebookImagePicker, didSelectImage: UIImage) {
+    imageView.image = didSelectImage
+    dismissViewControllerAnimated(true, completion: nil)
   }
 
 }
