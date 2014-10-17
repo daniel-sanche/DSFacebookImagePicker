@@ -84,6 +84,49 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		F43D357E19F0E37A006379D1 /* DSFacebookImagePicker */ = {
+			isa = PBXGroup;
+			children = (
+				F43D358019F0E3A8006379D1 /* Models */,
+				F43D358119F0E3B4006379D1 /* Views */,
+				F43D357F19F0E395006379D1 /* Controllers */,
+				F4B8A41D19EC84AF00EE1EFE /* FacebookNetworking.swift */,
+				F4B8A3FA19EC794700EE1EFE /* FacebookPicker.storyboard */,
+			);
+			name = DSFacebookImagePicker;
+			sourceTree = "<group>";
+		};
+		F43D357F19F0E395006379D1 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				F42239C019F092EF0092BCEA /* DSFacebookImagePicker.swift */,
+				F4B8A3F619EC794700EE1EFE /* AlbumListViewController.swift */,
+				F4892FE719EDE73D000FB760 /* FacebookNavController.swift */,
+				F44DDD0219EDFFC40059AB0D /* PhotoCollectionViewController.swift */,
+				F44DDD0819EE47280059AB0D /* MyPhotosViewController.swift */,
+				F42239B619EF399E0092BCEA /* PhotoDetailViewController.swift */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		F43D358019F0E3A8006379D1 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				F44DDD0419EE2B8C0059AB0D /* Photo.swift */,
+				F484A9D219EC98E2005C50D3 /* PhotoAlbum.swift */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		F43D358119F0E3B4006379D1 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				F44DDD0619EE3A540059AB0D /* PhotoCell.swift */,
+				F44DDD0019EDEDA40059AB0D /* AlbumCell.swift */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
 		F4B8A3E619EC794700EE1EFE = {
 			isa = PBXGroup;
 			children = (
@@ -105,20 +148,9 @@
 		F4B8A3F119EC794700EE1EFE /* DSFacebookImagePicker */ = {
 			isa = PBXGroup;
 			children = (
-				F42239C019F092EF0092BCEA /* DSFacebookImagePicker.swift */,
+				F43D357E19F0E37A006379D1 /* DSFacebookImagePicker */,
 				F4B8A3F419EC794700EE1EFE /* AppDelegate.swift */,
-				F4B8A3F619EC794700EE1EFE /* AlbumListViewController.swift */,
-				F4892FE719EDE73D000FB760 /* FacebookNavController.swift */,
-				F4B8A41D19EC84AF00EE1EFE /* FacebookNetworking.swift */,
-				F44DDD0419EE2B8C0059AB0D /* Photo.swift */,
-				F484A9D219EC98E2005C50D3 /* PhotoAlbum.swift */,
-				F44DDD0619EE3A540059AB0D /* PhotoCell.swift */,
-				F42239B619EF399E0092BCEA /* PhotoDetailViewController.swift */,
-				F44DDD0019EDEDA40059AB0D /* AlbumCell.swift */,
-				F4B8A3FA19EC794700EE1EFE /* FacebookPicker.storyboard */,
 				F42239C219F0A4B50092BCEA /* MainInterface.storyboard */,
-				F44DDD0219EDFFC40059AB0D /* PhotoCollectionViewController.swift */,
-				F44DDD0819EE47280059AB0D /* MyPhotosViewController.swift */,
 				F4B8A3FF19EC794700EE1EFE /* LaunchScreen.xib */,
 				F4B8A41819EC79C500EE1EFE /* BridgingHeader.h */,
 				F42239C419F0A5930092BCEA /* TestViewController.swift */,
