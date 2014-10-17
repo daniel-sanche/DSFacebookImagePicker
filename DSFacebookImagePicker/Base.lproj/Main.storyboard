@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6245" systemVersion="14A388a" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="49e-Tb-3d3">
     <dependencies>
-        <deployment defaultVersion="1792" identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6238"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
@@ -27,8 +26,8 @@
                                                 <constraint firstAttribute="width" constant="65" id="znH-c8-nGU"/>
                                             </constraints>
                                         </imageView>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Mr-dA-viR">
-                                            <rect key="frame" x="147" y="5" width="445" height="50"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Mr-dA-viR">
+                                            <rect key="frame" x="111" y="4" width="481" height="50"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="50" id="Dvf-nV-lVW"/>
                                             </constraints>
@@ -92,19 +91,19 @@
             </objects>
             <point key="canvasLocation" x="1498" y="-236"/>
         </scene>
-        <!--Tab Bar Controller-->
+        <!--Facebook Tab Controller-->
         <scene sceneID="yl2-sM-qoP">
             <objects>
-                <tabBarController id="49e-Tb-3d3" sceneMemberID="viewController">
+                <tabBarController id="49e-Tb-3d3" customClass="FacebookTabController" customModule="DSFacebookImagePicker" customModuleProvider="target" sceneMemberID="viewController">
                     <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
                     <nil key="simulatedBottomBarMetrics"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" id="W28-zg-YXA">
                         <rect key="frame" x="0.0" y="975" width="768" height="49"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                        <color key="tintColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <color key="barTintColor" red="0.2233184677" green="0.44654898850000002" blue="0.89194147099999999" alpha="1" colorSpace="calibratedRGB"/>
-                        <color key="selectedImageTintColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
+                        <color key="selectedImageTintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </tabBar>
                     <connections>
                         <segue destination="C5N-1Q-0JR" kind="relationship" relationship="viewControllers" id="RJP-JA-D2k"/>
@@ -119,7 +118,7 @@
         <scene sceneID="ka0-pR-Gsw">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Y37-cl-oE4" customClass="FacebookNavController" customModule="DSFacebookImagePicker" customModuleProvider="target" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Albums" image="second" id="xCf-9s-vc7"/>
+                    <tabBarItem key="tabBarItem" title="Albums" image="album_dark" selectedImage="album_white" id="xCf-9s-vc7"/>
                     <toolbarItems/>
                     <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="8W1-Fr-cnH">
@@ -204,11 +203,11 @@
             </objects>
             <point key="canvasLocation" x="1776" y="558"/>
         </scene>
-        <!--Photos-->
+        <!--Photos of Me-->
         <scene sceneID="W3K-0D-Uik">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="C5N-1Q-0JR" customClass="FacebookNavController" customModule="DSFacebookImagePicker" customModuleProvider="target" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Photos" id="EIY-mQ-D6Z"/>
+                    <tabBarItem key="tabBarItem" title="Photos of Me" image="me_dark" selectedImage="me_white" id="EIY-mQ-D6Z"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="4wa-fF-RFK">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -389,9 +388,13 @@
     </scenes>
     <resources>
         <image name="albumPlaceholder.png" width="60" height="60"/>
-        <image name="second" width="30" height="30"/>
+        <image name="album_dark" width="33" height="32"/>
+        <image name="album_white" width="33" height="32"/>
+        <image name="me_dark" width="36" height="32"/>
+        <image name="me_white" width="36" height="32"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="NYS-bL-yPB"/>
     </inferredMetricsTieBreakers>
+    <color key="tintColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
 </document>

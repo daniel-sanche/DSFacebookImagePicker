@@ -7,20 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		F42239B519EF37810092BCEA /* albumPlaceholder@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F42239B419EF37810092BCEA /* albumPlaceholder@2x.png */; };
 		F42239B719EF399E0092BCEA /* PhotoDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F42239B619EF399E0092BCEA /* PhotoDetailViewController.swift */; };
+		F42239BD19F08B660092BCEA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F42239BC19F08B660092BCEA /* Assets.xcassets */; };
+		F42239C119F092EF0092BCEA /* FacebookTabController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F42239C019F092EF0092BCEA /* FacebookTabController.swift */; };
 		F44DDD0119EDEDA40059AB0D /* AlbumCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F44DDD0019EDEDA40059AB0D /* AlbumCell.swift */; };
 		F44DDD0319EDFFC40059AB0D /* PhotoCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F44DDD0219EDFFC40059AB0D /* PhotoCollectionViewController.swift */; };
 		F44DDD0519EE2B8C0059AB0D /* Photo.swift in Sources */ = {isa = PBXBuildFile; fileRef = F44DDD0419EE2B8C0059AB0D /* Photo.swift */; };
 		F44DDD0719EE3A540059AB0D /* PhotoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F44DDD0619EE3A540059AB0D /* PhotoCell.swift */; };
 		F44DDD0919EE47280059AB0D /* MyPhotosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F44DDD0819EE47280059AB0D /* MyPhotosViewController.swift */; };
 		F484A9D319EC98E2005C50D3 /* PhotoAlbum.swift in Sources */ = {isa = PBXBuildFile; fileRef = F484A9D219EC98E2005C50D3 /* PhotoAlbum.swift */; };
-		F484A9D519ECDA16005C50D3 /* dirtblock.png in Resources */ = {isa = PBXBuildFile; fileRef = F484A9D419ECDA16005C50D3 /* dirtblock.png */; };
 		F4892FE819EDE73D000FB760 /* FacebookNavController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4892FE719EDE73D000FB760 /* FacebookNavController.swift */; };
 		F4B8A3F519EC794700EE1EFE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4B8A3F419EC794700EE1EFE /* AppDelegate.swift */; };
 		F4B8A3F719EC794700EE1EFE /* AlbumListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4B8A3F619EC794700EE1EFE /* AlbumListViewController.swift */; };
 		F4B8A3FC19EC794700EE1EFE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F4B8A3FA19EC794700EE1EFE /* Main.storyboard */; };
-		F4B8A3FE19EC794700EE1EFE /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F4B8A3FD19EC794700EE1EFE /* Images.xcassets */; };
 		F4B8A40119EC794700EE1EFE /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = F4B8A3FF19EC794700EE1EFE /* LaunchScreen.xib */; };
 		F4B8A40D19EC794700EE1EFE /* DSFacebookImagePickerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4B8A40C19EC794700EE1EFE /* DSFacebookImagePickerTests.swift */; };
 		F4B8A41A19EC7A1D00EE1EFE /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F4B8A41919EC7A1D00EE1EFE /* FacebookSDK.framework */; };
@@ -38,22 +37,21 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		F42239B419EF37810092BCEA /* albumPlaceholder@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "albumPlaceholder@2x.png"; sourceTree = "<group>"; };
 		F42239B619EF399E0092BCEA /* PhotoDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoDetailViewController.swift; sourceTree = "<group>"; };
+		F42239BC19F08B660092BCEA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		F42239C019F092EF0092BCEA /* FacebookTabController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FacebookTabController.swift; sourceTree = "<group>"; };
 		F44DDD0019EDEDA40059AB0D /* AlbumCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AlbumCell.swift; path = ../AlbumCell.swift; sourceTree = "<group>"; };
 		F44DDD0219EDFFC40059AB0D /* PhotoCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoCollectionViewController.swift; sourceTree = "<group>"; };
 		F44DDD0419EE2B8C0059AB0D /* Photo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Photo.swift; sourceTree = "<group>"; };
 		F44DDD0619EE3A540059AB0D /* PhotoCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoCell.swift; sourceTree = "<group>"; };
 		F44DDD0819EE47280059AB0D /* MyPhotosViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyPhotosViewController.swift; sourceTree = "<group>"; };
 		F484A9D219EC98E2005C50D3 /* PhotoAlbum.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoAlbum.swift; sourceTree = "<group>"; };
-		F484A9D419ECDA16005C50D3 /* dirtblock.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = dirtblock.png; sourceTree = "<group>"; };
 		F4892FE719EDE73D000FB760 /* FacebookNavController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FacebookNavController.swift; sourceTree = "<group>"; };
 		F4B8A3EF19EC794700EE1EFE /* DSFacebookImagePicker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DSFacebookImagePicker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F4B8A3F319EC794700EE1EFE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F4B8A3F419EC794700EE1EFE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F4B8A3F619EC794700EE1EFE /* AlbumListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumListViewController.swift; sourceTree = "<group>"; };
 		F4B8A3FB19EC794700EE1EFE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		F4B8A3FD19EC794700EE1EFE /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		F4B8A40019EC794700EE1EFE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		F4B8A40619EC794700EE1EFE /* DSFacebookImagePickerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DSFacebookImagePickerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F4B8A40B19EC794700EE1EFE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -115,11 +113,10 @@
 				F4B8A3FA19EC794700EE1EFE /* Main.storyboard */,
 				F44DDD0219EDFFC40059AB0D /* PhotoCollectionViewController.swift */,
 				F44DDD0819EE47280059AB0D /* MyPhotosViewController.swift */,
-				F4B8A3FD19EC794700EE1EFE /* Images.xcassets */,
 				F4B8A3FF19EC794700EE1EFE /* LaunchScreen.xib */,
 				F4B8A41819EC79C500EE1EFE /* BridgingHeader.h */,
-				F484A9D419ECDA16005C50D3 /* dirtblock.png */,
-				F42239B419EF37810092BCEA /* albumPlaceholder@2x.png */,
+				F42239BC19F08B660092BCEA /* Assets.xcassets */,
+				F42239C019F092EF0092BCEA /* FacebookTabController.swift */,
 				F4B8A41919EC7A1D00EE1EFE /* FacebookSDK.framework */,
 				F4B8A3F219EC794700EE1EFE /* Supporting Files */,
 			);
@@ -232,10 +229,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				F4B8A3FC19EC794700EE1EFE /* Main.storyboard in Resources */,
-				F42239B519EF37810092BCEA /* albumPlaceholder@2x.png in Resources */,
 				F4B8A40119EC794700EE1EFE /* LaunchScreen.xib in Resources */,
-				F484A9D519ECDA16005C50D3 /* dirtblock.png in Resources */,
-				F4B8A3FE19EC794700EE1EFE /* Images.xcassets in Resources */,
+				F42239BD19F08B660092BCEA /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -260,6 +255,7 @@
 				F4B8A41E19EC84AF00EE1EFE /* FacebookNetworking.swift in Sources */,
 				F42239B719EF399E0092BCEA /* PhotoDetailViewController.swift in Sources */,
 				F44DDD0319EDFFC40059AB0D /* PhotoCollectionViewController.swift in Sources */,
+				F42239C119F092EF0092BCEA /* FacebookTabController.swift in Sources */,
 				F44DDD0119EDEDA40059AB0D /* AlbumCell.swift in Sources */,
 				F4892FE819EDE73D000FB760 /* FacebookNavController.swift in Sources */,
 				F4B8A3F519EC794700EE1EFE /* AppDelegate.swift in Sources */,
@@ -387,7 +383,6 @@
 		F4B8A41119EC794700EE1EFE /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/DSFacebookImagePicker",
@@ -403,7 +398,6 @@
 		F4B8A41219EC794700EE1EFE /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/DSFacebookImagePicker",
