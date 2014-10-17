@@ -78,8 +78,11 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="My Albums" id="Ems-5W-lgs">
-                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="v5s-vn-8EJ">
+                        <barButtonItem key="rightBarButtonItem" systemItem="cancel" id="v5s-vn-8EJ">
                             <color key="tintColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
+                            <connections>
+                                <action selector="cancelPressed:" destination="3tH-7H-2Ls" id="QpF-au-4Qt"/>
+                            </connections>
                         </barButtonItem>
                     </navigationItem>
                     <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
@@ -91,10 +94,10 @@
             </objects>
             <point key="canvasLocation" x="1498" y="-236"/>
         </scene>
-        <!--Facebook Tab Controller-->
+        <!--Facebook Image Picker-->
         <scene sceneID="yl2-sM-qoP">
             <objects>
-                <tabBarController id="49e-Tb-3d3" customClass="FacebookTabController" customModule="DSFacebookImagePicker" customModuleProvider="target" sceneMemberID="viewController">
+                <tabBarController id="49e-Tb-3d3" customClass="DSFacebookImagePicker" customModule="DSFacebookImagePicker" customModuleProvider="target" sceneMemberID="viewController">
                     <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
                     <nil key="simulatedBottomBarMetrics"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" id="W28-zg-YXA">
@@ -194,7 +197,13 @@
                             <outlet property="delegate" destination="syc-NE-kDW" id="muZ-8i-ahn"/>
                         </connections>
                     </collectionView>
-                    <navigationItem key="navigationItem" title="Photos of Me" id="5Ng-9F-r9l"/>
+                    <navigationItem key="navigationItem" title="Photos of Me" id="5Ng-9F-r9l">
+                        <barButtonItem key="rightBarButtonItem" systemItem="cancel" id="sea-zN-xWh">
+                            <connections>
+                                <action selector="cancelPressed:" destination="syc-NE-kDW" id="Lc9-en-zHJ"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <segue destination="MKp-nR-2uz" kind="presentation" identifier="SelectPhoto" id="3A4-ph-72f"/>
                     </connections>
@@ -394,7 +403,7 @@
         <image name="me_white" width="36" height="32"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="NYS-bL-yPB"/>
+        <segue reference="3A4-ph-72f"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
 </document>

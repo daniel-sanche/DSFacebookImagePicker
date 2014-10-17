@@ -83,7 +83,11 @@ class PhotoDetailViewController: UIViewController {
   
   
   @IBAction func choosePressed(sender: AnyObject) {
-    
+    if let tabBar = self.presentingViewController as? DSFacebookImagePicker{
+      if let selected = self.imageView.image{
+       tabBar.completeWithImage(selected)
+      }
+    }
   }
 
 }

@@ -26,4 +26,9 @@ class MyPhotosViewController: PhotoCollectionViewController {
     fetchData()
   }
 
+  @IBAction func cancelPressed(sender: AnyObject) {
+    if let tabBar = tabBarController as? DSFacebookImagePicker{
+      tabBar.cancel()
+    }
+  }
 }
