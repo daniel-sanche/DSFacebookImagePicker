@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6245" systemVersion="14A388a" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="49e-Tb-3d3">
     <dependencies>
+        <deployment defaultVersion="1792" identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6238"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
@@ -121,7 +122,7 @@
         <scene sceneID="ka0-pR-Gsw">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Y37-cl-oE4" customClass="FacebookNavController" customModule="DSFacebookImagePicker" customModuleProvider="target" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Albums" image="album_dark" selectedImage="album_white" id="xCf-9s-vc7"/>
+                    <tabBarItem key="tabBarItem" title="Albums" image="album_dark" id="xCf-9s-vc7"/>
                     <toolbarItems/>
                     <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="8W1-Fr-cnH">
@@ -216,7 +217,7 @@
         <scene sceneID="W3K-0D-Uik">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="C5N-1Q-0JR" customClass="FacebookNavController" customModule="DSFacebookImagePicker" customModuleProvider="target" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Photos of Me" image="me_dark" selectedImage="me_white" id="EIY-mQ-D6Z"/>
+                    <tabBarItem key="tabBarItem" title="Photos of Me" image="me_dark" id="EIY-mQ-D6Z"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="4wa-fF-RFK">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -349,9 +350,14 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="lQY-Ce-NRI">
                                 <rect key="frame" x="0.0" y="65" width="600" height="470"/>
                             </imageView>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="rPv-ks-L2q">
+                                <rect key="frame" x="282" y="281" width="37" height="37"/>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
                         <constraints>
+                            <constraint firstAttribute="centerY" secondItem="rPv-ks-L2q" secondAttribute="centerY" id="3XZ-pn-SnV"/>
+                            <constraint firstAttribute="centerX" secondItem="rPv-ks-L2q" secondAttribute="centerX" id="4EI-iJ-xtt"/>
                             <constraint firstAttribute="centerY" secondItem="lQY-Ce-NRI" secondAttribute="centerY" id="7Ny-fr-xFy"/>
                             <constraint firstItem="mGZ-th-dhB" firstAttribute="leading" secondItem="GpF-81-jIB" secondAttribute="leading" id="9NQ-pM-npf"/>
                             <constraint firstAttribute="bottom" secondItem="mGZ-th-dhB" secondAttribute="bottom" id="Gwr-TW-Uxy"/>
@@ -365,6 +371,7 @@
                     </view>
                     <navigationItem key="navigationItem" title="Selected Photo" id="rrp-4e-cda"/>
                     <connections>
+                        <outlet property="activityIndicator" destination="rPv-ks-L2q" id="5Kd-cq-ANp"/>
                         <outlet property="imageView" destination="lQY-Ce-NRI" id="7Ib-S8-bsk"/>
                     </connections>
                 </viewController>
@@ -398,9 +405,7 @@
     <resources>
         <image name="albumPlaceholder.png" width="60" height="60"/>
         <image name="album_dark" width="33" height="32"/>
-        <image name="album_white" width="33" height="32"/>
         <image name="me_dark" width="36" height="32"/>
-        <image name="me_white" width="36" height="32"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="3A4-ph-72f"/>

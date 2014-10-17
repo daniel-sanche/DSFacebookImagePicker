@@ -21,9 +21,12 @@ class PhotoDetailViewController: UIViewController {
   var selectedPhoto : Photo?
   var imageState = LargePhotoState.Loading
   
+  @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
   
   override func viewDidLoad() {
     super.viewDidLoad()
+    
+    activityIndicator.hidden = true
     
     let app = UIApplication.sharedApplication()
     app.networkActivityIndicatorVisible = true
@@ -83,11 +86,28 @@ class PhotoDetailViewController: UIViewController {
   
   
   @IBAction func choosePressed(sender: AnyObject) {
+    //if the large photo is still loading, try again later
+    if imageState == LargePhotoState.Loading {
+      let delay = 0.1 * Double(NSEC_PER_SEC)
+      let time = dispatch_time(DISPATCH_TIME_NOW, Int64(delay))
+      self.displayActivityIndicator()
+      dispatch_after(time, dispatch_get_main_queue(), { () in
+        self.choosePressed(sender)
+      })
+      return
+    }
+    activityIndicator.hidden = true
+    
     if let tabBar = self.presentingViewController as? DSFacebookImagePicker{
       if let selected = self.imageView.image{
        tabBar.completeWithImage(selected)
       }
     }
+  }
+  
+  func displayActivityIndicator(){
+    activityIndicator.startAnimating()
+    activityIndicator.hidden = false
   }
 
 }
