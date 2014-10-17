@@ -97,7 +97,7 @@
         <!--Facebook Image Picker-->
         <scene sceneID="yl2-sM-qoP">
             <objects>
-                <tabBarController id="49e-Tb-3d3" customClass="DSFacebookImagePicker" customModule="DSFacebookImagePicker" customModuleProvider="target" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="Picker" useStoryboardIdentifierAsRestorationIdentifier="YES" id="49e-Tb-3d3" customClass="DSFacebookImagePicker" customModule="DSFacebookImagePicker" customModuleProvider="target" sceneMemberID="viewController">
                     <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
                     <nil key="simulatedBottomBarMetrics"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" id="W28-zg-YXA">
