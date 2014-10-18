@@ -13,7 +13,7 @@ class TestViewController: UIViewController, FacebookImagePickerDelegate {
   @IBOutlet weak var imageView: UIImageView!
 
   @IBAction func launchPhotoPicker(sender: AnyObject) {
-    let picker = DSFacebookImagePicker.picker()
+    let picker = DSFacebookImagePicker.imagePicker()
     picker.imagePickerDelegate = self
     presentViewController(picker, animated: true, completion: nil)
   }

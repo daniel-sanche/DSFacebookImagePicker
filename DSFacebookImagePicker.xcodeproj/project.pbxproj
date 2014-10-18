@@ -79,12 +79,12 @@
 		F43D357F19F0E395006379D1 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				F4FD7CEE19F2F95200188DBC /* AlbumListViewController.swift */,
 				F4FD7CEF19F2F95200188DBC /* DSFacebookImagePicker.swift */,
-				F4FD7CF019F2F95200188DBC /* FacebookNavController.swift */,
+				F4FD7CEE19F2F95200188DBC /* AlbumListViewController.swift */,
 				F4FD7CF119F2F95200188DBC /* MyPhotosViewController.swift */,
 				F4FD7CF219F2F95200188DBC /* PhotoCollectionViewController.swift */,
 				F4FD7CF319F2F95200188DBC /* PhotoDetailViewController.swift */,
+				F4FD7CF019F2F95200188DBC /* FacebookNavController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
