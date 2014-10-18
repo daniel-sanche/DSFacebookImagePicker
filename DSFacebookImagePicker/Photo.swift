@@ -9,8 +9,8 @@
 import UIKit
 
 class Photo {
-  let photoID : String
-  let ownerName : String
+  let photoID : String?
+  let ownerName : String?
   let fullImageURL : NSURL?
   var thumbnailURL : NSURL?
   var thumbnailData : UIImage?
@@ -18,16 +18,21 @@ class Photo {
   var isCached : Bool
   
   init(json:NSDictionary, fullImageSize:Int=Int.max) {
-    let fromDict = json["from"] as [String : String]
-
-    photoID = json["id"] as String
-    ownerName = fromDict["name"]!
+    let fromDict = json["from"] as? [String : String]
+    
+    if let newID = json["id"] as? String{
+      photoID = newID
+    }
+    if let newName = fromDict?["name"]{
+      ownerName = newName
+    }
     imageLoadFailed = false
     isCached = false
     
-    let imageArray = json["images"] as NSArray
-    thumbnailURL = FacebookNetworking.findBestImageURL(imageArray, minImageSize:Int.min)
-    fullImageURL = FacebookNetworking.findBestImageURL(imageArray, minImageSize:fullImageSize)
+    if let imageArray = json["images"] as? NSArray {
+      thumbnailURL = FacebookNetworking.findBestImageURL(imageArray, minImageSize:Int.min)
+      fullImageURL = FacebookNetworking.findBestImageURL(imageArray, minImageSize:fullImageSize)
+    }
   }
   
   func loadThumbnail(){
@@ -58,13 +63,15 @@ class Photo {
     if !isCached && thumbnailData != nil{
       let tempDirectory = NSURL(fileURLWithPath: NSTemporaryDirectory(), isDirectory: true)
 
-      let cacheURL = tempDirectory.URLByAppendingPathComponent(photoID)
+      if photoID != nil{
+        let cacheURL = tempDirectory.URLByAppendingPathComponent(photoID!)
     
-      let success = UIImagePNGRepresentation(thumbnailData).writeToURL(cacheURL, atomically: true)
+        let success = UIImagePNGRepresentation(thumbnailData).writeToURL(cacheURL, atomically: true)
       
-      if(success){
-        thumbnailURL = cacheURL
-        isCached = true
+        if(success){
+          thumbnailURL = cacheURL
+          isCached = true
+        }
       }
     }
     imageLoadFailed = false

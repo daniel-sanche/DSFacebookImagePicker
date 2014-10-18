@@ -53,9 +53,8 @@ class AlbumListViewController: UITableViewController {
   
   override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
     
-    if albumList != nil{
+    if let thisAlbum = albumList?[indexPath.row]{
       let cell = tableView.dequeueReusableCellWithIdentifier("AlbumCell", forIndexPath:indexPath) as AlbumCell
-      let thisAlbum = albumList![indexPath.row]
       cell.setUpWithAlbum(thisAlbum)
       return cell
     } else {
@@ -73,9 +72,9 @@ class AlbumListViewController: UITableViewController {
   }
   
   override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-    let thisAlbum = albumList![indexPath.row]
-    
-    self .performSegueWithIdentifier("AlbumDetail", sender: thisAlbum)
+    if let thisAlbum = albumList?[indexPath.row]{
+      self .performSegueWithIdentifier("AlbumDetail", sender: thisAlbum)
+    }
   }
   
   override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {

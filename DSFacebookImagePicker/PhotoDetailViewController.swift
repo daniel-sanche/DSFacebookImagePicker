@@ -53,12 +53,12 @@ class PhotoDetailViewController: UIViewController {
 
       
       if let error = readError{
-        self.imageState = LargePhotoState.Failed
+        self.imageState = .Failed
         app.networkActivityIndicatorVisible = false
       } else {
         dispatch_async(dispatch_get_main_queue(), { () in
           self.imageView.image = UIImage(data:data)
-          self.imageState = LargePhotoState.Active
+          self.imageState = .Active
           app.networkActivityIndicatorVisible = false
         })
       }
@@ -87,7 +87,7 @@ class PhotoDetailViewController: UIViewController {
   
   @IBAction func choosePressed(sender: AnyObject) {
     //if the large photo is still loading, try again later
-    if imageState == LargePhotoState.Loading {
+    if imageState == .Loading {
       let delay = 0.1 * Double(NSEC_PER_SEC)
       let time = dispatch_time(DISPATCH_TIME_NOW, Int64(delay))
       self.displayActivityIndicator()
