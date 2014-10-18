@@ -16,6 +16,12 @@ protocol FacebookImagePickerDelegate {
 class DSFacebookImagePicker: UITabBarController{
   
   var imagePickerDelegate:FacebookImagePickerDelegate?
+  
+  class func picker() -> DSFacebookImagePicker{
+    let storyboard = UIStoryboard(name: "FacebookPicker", bundle: nil)
+    let picker = storyboard.instantiateViewControllerWithIdentifier("Picker") as DSFacebookImagePicker
+    return picker
+  }
 
     override func viewDidLoad() {
         super.viewDidLoad()
