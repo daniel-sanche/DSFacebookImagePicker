@@ -23,20 +23,9 @@
 		F4B8A3F719EC794700EE1EFE /* AlbumListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4B8A3F619EC794700EE1EFE /* AlbumListViewController.swift */; };
 		F4B8A3FC19EC794700EE1EFE /* FacebookPicker.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F4B8A3FA19EC794700EE1EFE /* FacebookPicker.storyboard */; };
 		F4B8A40119EC794700EE1EFE /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = F4B8A3FF19EC794700EE1EFE /* LaunchScreen.xib */; };
-		F4B8A40D19EC794700EE1EFE /* DSFacebookImagePickerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4B8A40C19EC794700EE1EFE /* DSFacebookImagePickerTests.swift */; };
 		F4B8A41A19EC7A1D00EE1EFE /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F4B8A41919EC7A1D00EE1EFE /* FacebookSDK.framework */; };
 		F4B8A41E19EC84AF00EE1EFE /* FacebookNetworking.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4B8A41D19EC84AF00EE1EFE /* FacebookNetworking.swift */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		F4B8A40719EC794700EE1EFE /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = F4B8A3E719EC794700EE1EFE /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = F4B8A3EE19EC794700EE1EFE;
-			remoteInfo = DSFacebookImagePicker;
-		};
-/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		F42239B619EF399E0092BCEA /* PhotoDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoDetailViewController.swift; sourceTree = "<group>"; };
@@ -57,9 +46,6 @@
 		F4B8A3F619EC794700EE1EFE /* AlbumListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumListViewController.swift; sourceTree = "<group>"; };
 		F4B8A3FB19EC794700EE1EFE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/FacebookPicker.storyboard; sourceTree = "<group>"; };
 		F4B8A40019EC794700EE1EFE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
-		F4B8A40619EC794700EE1EFE /* DSFacebookImagePickerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DSFacebookImagePickerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		F4B8A40B19EC794700EE1EFE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		F4B8A40C19EC794700EE1EFE /* DSFacebookImagePickerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DSFacebookImagePickerTests.swift; sourceTree = "<group>"; };
 		F4B8A41819EC79C500EE1EFE /* BridgingHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BridgingHeader.h; sourceTree = "<group>"; };
 		F4B8A41919EC7A1D00EE1EFE /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FacebookSDK.framework; sourceTree = "<group>"; };
 		F4B8A41D19EC84AF00EE1EFE /* FacebookNetworking.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FacebookNetworking.swift; sourceTree = "<group>"; };
@@ -71,13 +57,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				F4B8A41A19EC7A1D00EE1EFE /* FacebookSDK.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		F4B8A40319EC794700EE1EFE /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -131,7 +110,6 @@
 			isa = PBXGroup;
 			children = (
 				F4B8A3F119EC794700EE1EFE /* DSFacebookImagePicker */,
-				F4B8A40919EC794700EE1EFE /* DSFacebookImagePickerTests */,
 				F4B8A3F019EC794700EE1EFE /* Products */,
 			);
 			sourceTree = "<group>";
@@ -140,7 +118,6 @@
 			isa = PBXGroup;
 			children = (
 				F4B8A3EF19EC794700EE1EFE /* DSFacebookImagePicker.app */,
-				F4B8A40619EC794700EE1EFE /* DSFacebookImagePickerTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -169,23 +146,6 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		F4B8A40919EC794700EE1EFE /* DSFacebookImagePickerTests */ = {
-			isa = PBXGroup;
-			children = (
-				F4B8A40C19EC794700EE1EFE /* DSFacebookImagePickerTests.swift */,
-				F4B8A40A19EC794700EE1EFE /* Supporting Files */,
-			);
-			path = DSFacebookImagePickerTests;
-			sourceTree = "<group>";
-		};
-		F4B8A40A19EC794700EE1EFE /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				F4B8A40B19EC794700EE1EFE /* Info.plist */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -206,24 +166,6 @@
 			productReference = F4B8A3EF19EC794700EE1EFE /* DSFacebookImagePicker.app */;
 			productType = "com.apple.product-type.application";
 		};
-		F4B8A40519EC794700EE1EFE /* DSFacebookImagePickerTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = F4B8A41319EC794700EE1EFE /* Build configuration list for PBXNativeTarget "DSFacebookImagePickerTests" */;
-			buildPhases = (
-				F4B8A40219EC794700EE1EFE /* Sources */,
-				F4B8A40319EC794700EE1EFE /* Frameworks */,
-				F4B8A40419EC794700EE1EFE /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				F4B8A40819EC794700EE1EFE /* PBXTargetDependency */,
-			);
-			name = DSFacebookImagePickerTests;
-			productName = DSFacebookImagePickerTests;
-			productReference = F4B8A40619EC794700EE1EFE /* DSFacebookImagePickerTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -235,10 +177,6 @@
 				TargetAttributes = {
 					F4B8A3EE19EC794700EE1EFE = {
 						CreatedOnToolsVersion = 6.0.1;
-					};
-					F4B8A40519EC794700EE1EFE = {
-						CreatedOnToolsVersion = 6.0.1;
-						TestTargetID = F4B8A3EE19EC794700EE1EFE;
 					};
 				};
 			};
@@ -256,7 +194,6 @@
 			projectRoot = "";
 			targets = (
 				F4B8A3EE19EC794700EE1EFE /* DSFacebookImagePicker */,
-				F4B8A40519EC794700EE1EFE /* DSFacebookImagePickerTests */,
 			);
 		};
 /* End PBXProject section */
@@ -270,13 +207,6 @@
 				F42239C319F0A4B50092BCEA /* MainInterface.storyboard in Resources */,
 				F4B8A40119EC794700EE1EFE /* LaunchScreen.xib in Resources */,
 				F42239BD19F08B660092BCEA /* Assets.xcassets in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		F4B8A40419EC794700EE1EFE /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -303,23 +233,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		F4B8A40219EC794700EE1EFE /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				F4B8A40D19EC794700EE1EFE /* DSFacebookImagePickerTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		F4B8A40819EC794700EE1EFE /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = F4B8A3EE19EC794700EE1EFE /* DSFacebookImagePicker */;
-			targetProxy = F4B8A40719EC794700EE1EFE /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		F4B8A3FA19EC794700EE1EFE /* FacebookPicker.storyboard */ = {
@@ -450,40 +364,6 @@
 			};
 			name = Release;
 		};
-		F4B8A41419EC794700EE1EFE /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = DSFacebookImagePickerTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DSFacebookImagePicker.app/DSFacebookImagePicker";
-			};
-			name = Debug;
-		};
-		F4B8A41519EC794700EE1EFE /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = DSFacebookImagePickerTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DSFacebookImagePicker.app/DSFacebookImagePicker";
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -501,15 +381,6 @@
 			buildConfigurations = (
 				F4B8A41119EC794700EE1EFE /* Debug */,
 				F4B8A41219EC794700EE1EFE /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		F4B8A41319EC794700EE1EFE /* Build configuration list for PBXNativeTarget "DSFacebookImagePickerTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				F4B8A41419EC794700EE1EFE /* Debug */,
-				F4B8A41519EC794700EE1EFE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
