@@ -23,10 +23,14 @@ class MyPhotosViewController: PhotoCollectionViewController {
   }
   
   override func viewDidLoad() {
+    
+
     if !FacebookNetworking.isLoggedIn() {
         let loginController = DSFacebookImagePicker.loginController()
         self.tabBarController?.presentViewController(loginController, animated: true, completion: nil)
     }
+
+
   }
     
     override func viewWillAppear(animated: Bool) {

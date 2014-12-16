@@ -8,15 +8,29 @@
 
 import UIKit
 
-class LoginViewController: UIViewController {
+class LoginViewController: UIViewController, FBLoginViewDelegate {
 
-    override func viewDidAppear(animated: Bool) {
-        super.viewDidAppear(animated)
-        if FacebookNetworking.isLoggedIn(){
-            dismiss()
-        }
+    @IBOutlet weak var loginBtn: FBLoginView!
+    
+    @IBOutlet weak var textField: UILabel!
+    
+    override func preferredStatusBarStyle() -> UIStatusBarStyle {
+        return UIStatusBarStyle.LightContent
     }
     
+    override func viewDidAppear(animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        UIApplication.sharedApplication().setStatusBarStyle(UIStatusBarStyle.LightContent, animated: true)
+        
+        if let permissions = FacebookNetworking.missingPermissions(){
+            loginBtn.readPermissions = permissions
+        }
+        
+        loginBtn.delegate = self
+        
+    }
+
     @IBAction func cancelPressed(sender: AnyObject) {
         if let picker = self.presentingViewController as? DSFacebookImagePicker{
             picker.dismissViewControllerAnimated(false, completion: { () -> Void in
@@ -26,21 +40,19 @@ class LoginViewController: UIViewController {
     }
     
     
-    @IBAction func loginpressed(sender: AnyObject) {
-        FacebookNetworking.logIn { (session, error) -> Void in
-            if error == nil {
-                self.dismiss()
-            } else {
-                let alert = UIAlertView(title: "Login Failed", message: error!.localizedDescription, delegate: nil, cancelButtonTitle: "Ok")
-                alert.show()
-            }
-        }
-    }
-    
     func dismiss(){
         if let picker = self.presentingViewController as? DSFacebookImagePicker{
             picker.dismissViewControllerAnimated(false, completion:nil)
         }
     }
+    
+    func loginViewShowingLoggedInUser(loginView: FBLoginView!) {
+        self.dismiss()
+    }
+    
+    func loginView(loginView: FBLoginView!, handleError error: NSError!) {
+        self.textField.text = error.localizedDescription
+    }
+    
     
 }

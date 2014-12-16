@@ -225,29 +225,53 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hj1-3c-vXX">
-                                <rect key="frame" x="16" y="6" width="48" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hj1-3c-vXX">
+                                <rect key="frame" x="150" y="350" width="300" height="54"/>
                                 <state key="normal" title="Cancel">
-                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
                                     <action selector="cancelPressed:" destination="KMO-LM-BDy" eventType="touchUpInside" id="RYf-Fn-Fov"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="P5e-EG-jsV">
-                                <rect key="frame" x="204" y="300" width="43" height="30"/>
-                                <state key="normal" title="Log In">
-                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="loginpressed:" destination="KMO-LM-BDy" eventType="touchUpInside" id="DI0-f8-CWw"/>
-                                </connections>
-                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="prY-rl-D2i" customClass="FBLoginView">
+                                <rect key="frame" x="150" y="273" width="300" height="54"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="54" id="L4e-mP-Bw2"/>
+                                    <constraint firstAttribute="width" constant="300" id="vZw-of-U5y"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Log in to Access Facebook Photos" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N7T-Tg-Xai">
+                                <rect key="frame" x="80" y="128" width="440" height="106"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="440" id="9wb-6U-Gdb"/>
+                                    <constraint firstAttribute="height" constant="106" id="PGB-xj-aeT"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <color key="textColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.2233184677" green="0.44654898850000002" blue="0.89194147099999999" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="centerX" secondItem="prY-rl-D2i" secondAttribute="centerX" id="3Im-yQ-8Qy"/>
+                            <constraint firstItem="hj1-3c-vXX" firstAttribute="top" secondItem="prY-rl-D2i" secondAttribute="bottom" constant="23" id="FDk-Pz-5F8"/>
+                            <constraint firstAttribute="centerX" secondItem="prY-rl-D2i" secondAttribute="centerX" id="Plc-1f-01Q"/>
+                            <constraint firstItem="prY-rl-D2i" firstAttribute="top" secondItem="N7T-Tg-Xai" secondAttribute="bottom" constant="39" id="Qfn-RC-28y"/>
+                            <constraint firstItem="hj1-3c-vXX" firstAttribute="height" secondItem="prY-rl-D2i" secondAttribute="height" id="Qwu-Bg-wmi"/>
+                            <constraint firstAttribute="centerX" secondItem="hj1-3c-vXX" secondAttribute="centerX" id="REf-zK-GAV"/>
+                            <constraint firstAttribute="centerX" secondItem="prY-rl-D2i" secondAttribute="centerX" id="kcZ-9m-qbO"/>
+                            <constraint firstAttribute="centerX" secondItem="N7T-Tg-Xai" secondAttribute="centerX" id="khy-qf-L23"/>
+                            <constraint firstItem="hj1-3c-vXX" firstAttribute="width" secondItem="prY-rl-D2i" secondAttribute="width" id="kle-PA-Zcc"/>
+                            <constraint firstAttribute="centerY" secondItem="prY-rl-D2i" secondAttribute="centerY" id="ujB-bJ-Ca2"/>
+                        </constraints>
                     </view>
+                    <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
+                    <connections>
+                        <outlet property="loginBtn" destination="prY-rl-D2i" id="n0e-k2-ZCI"/>
+                        <outlet property="textField" destination="N7T-Tg-Xai" id="tOu-Nh-DoW"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="31o-8n-HNv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
