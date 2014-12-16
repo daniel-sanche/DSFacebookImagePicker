@@ -112,7 +112,6 @@
                     <connections>
                         <segue destination="C5N-1Q-0JR" kind="relationship" relationship="viewControllers" id="RJP-JA-D2k"/>
                         <segue destination="Y37-cl-oE4" kind="relationship" relationship="viewControllers" id="ope-l7-hTb"/>
-                        <segue destination="KMO-LM-BDy" kind="presentation" identifier="signin" id="QoY-Pu-Pbw"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HuB-VB-40B" sceneMemberID="firstResponder"/>
@@ -214,10 +213,10 @@
             </objects>
             <point key="canvasLocation" x="1776" y="558"/>
         </scene>
-        <!--View Controller-->
+        <!--Login View Controller-->
         <scene sceneID="Iww-Qg-20d">
             <objects>
-                <viewController id="KMO-LM-BDy" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Login" useStoryboardIdentifierAsRestorationIdentifier="YES" id="KMO-LM-BDy" customClass="LoginViewController" customModule="DSFacebookImagePicker" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="sRK-mH-pnL"/>
                         <viewControllerLayoutGuide type="bottom" id="cAv-uS-RHI"/>
@@ -225,12 +224,34 @@
                     <view key="view" contentMode="scaleToFill" id="E5p-rC-8k9">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hj1-3c-vXX">
+                                <rect key="frame" x="16" y="6" width="48" height="30"/>
+                                <state key="normal" title="Cancel">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="cancelPressed:" destination="KMO-LM-BDy" eventType="touchUpInside" id="RYf-Fn-Fov"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="P5e-EG-jsV">
+                                <rect key="frame" x="204" y="300" width="43" height="30"/>
+                                <state key="normal" title="Log In">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="loginpressed:" destination="KMO-LM-BDy" eventType="touchUpInside" id="DI0-f8-CWw"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="31o-8n-HNv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="78" y="772"/>
+            <point key="canvasLocation" x="130" y="1314"/>
         </scene>
         <!--Photos of Me-->
         <scene sceneID="W3K-0D-Uik">
@@ -427,7 +448,7 @@
         <image name="me_dark" width="36" height="32"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="3A4-ph-72f"/>
+        <segue reference="NYS-bL-yPB"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
 </document>
