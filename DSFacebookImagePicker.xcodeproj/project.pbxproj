@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5F506B3C1A3FB807004CB44A /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F506B3B1A3FB807004CB44A /* LoginViewController.swift */; };
 		F42239C319F0A4B50092BCEA /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F42239C219F0A4B50092BCEA /* MainInterface.storyboard */; };
 		F42239C519F0A5930092BCEA /* TestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F42239C419F0A5930092BCEA /* TestViewController.swift */; };
 		F4B8A3F519EC794700EE1EFE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4B8A3F419EC794700EE1EFE /* AppDelegate.swift */; };
@@ -28,6 +29,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5F506B3B1A3FB807004CB44A /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		F42239C219F0A4B50092BCEA /* MainInterface.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MainInterface.storyboard; sourceTree = "<group>"; };
 		F42239C419F0A5930092BCEA /* TestViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestViewController.swift; sourceTree = "<group>"; };
 		F4B8A3EF19EC794700EE1EFE /* DSFacebookImagePicker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DSFacebookImagePicker.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -85,6 +87,7 @@
 				F4FD7CF219F2F95200188DBC /* PhotoCollectionViewController.swift */,
 				F4FD7CF319F2F95200188DBC /* PhotoDetailViewController.swift */,
 				F4FD7CF019F2F95200188DBC /* FacebookNavController.swift */,
+				5F506B3B1A3FB807004CB44A /* LoginViewController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -217,6 +220,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5F506B3C1A3FB807004CB44A /* LoginViewController.swift in Sources */,
 				F4FD7CE719F2F8DD00188DBC /* PhotoCell.swift in Sources */,
 				F4FD7CF919F2F95200188DBC /* PhotoDetailViewController.swift in Sources */,
 				F4FD7CE419F2F8D800188DBC /* Photo.swift in Sources */,

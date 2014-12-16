@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6245" systemVersion="14A388a" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="49e-Tb-3d3">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6724" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="49e-Tb-3d3">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6238"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6711"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -212,6 +213,77 @@
             </objects>
             <point key="canvasLocation" x="1776" y="558"/>
         </scene>
+        <!--Login View Controller-->
+        <scene sceneID="Iww-Qg-20d">
+            <objects>
+                <viewController storyboardIdentifier="Login" useStoryboardIdentifierAsRestorationIdentifier="YES" id="KMO-LM-BDy" customClass="LoginViewController" customModule="DSFacebookImagePicker" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="sRK-mH-pnL"/>
+                        <viewControllerLayoutGuide type="bottom" id="cAv-uS-RHI"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="E5p-rC-8k9">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hj1-3c-vXX">
+                                <rect key="frame" x="150" y="350" width="300" height="54"/>
+                                <state key="normal" title="Cancel">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="cancelPressed:" destination="KMO-LM-BDy" eventType="touchUpInside" id="RYf-Fn-Fov"/>
+                                </connections>
+                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="prY-rl-D2i" customClass="FBLoginView">
+                                <rect key="frame" x="150" y="273" width="300" height="54"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="54" id="L4e-mP-Bw2"/>
+                                    <constraint firstAttribute="width" constant="300" id="vZw-of-U5y"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Log in to Access Facebook Photos" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N7T-Tg-Xai">
+                                <rect key="frame" x="0.0" y="128" width="600" height="106"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="440" id="9wb-6U-Gdb"/>
+                                    <constraint firstAttribute="height" constant="106" id="PGB-xj-aeT"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <color key="textColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="9wb-6U-Gdb"/>
+                                    </mask>
+                                </variation>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.2233184677" green="0.44654898850000002" blue="0.89194147099999999" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="centerX" secondItem="prY-rl-D2i" secondAttribute="centerX" id="3Im-yQ-8Qy"/>
+                            <constraint firstItem="hj1-3c-vXX" firstAttribute="top" secondItem="prY-rl-D2i" secondAttribute="bottom" constant="23" id="FDk-Pz-5F8"/>
+                            <constraint firstAttribute="centerX" secondItem="prY-rl-D2i" secondAttribute="centerX" id="Plc-1f-01Q"/>
+                            <constraint firstItem="prY-rl-D2i" firstAttribute="top" secondItem="N7T-Tg-Xai" secondAttribute="bottom" constant="39" id="Qfn-RC-28y"/>
+                            <constraint firstItem="hj1-3c-vXX" firstAttribute="height" secondItem="prY-rl-D2i" secondAttribute="height" id="Qwu-Bg-wmi"/>
+                            <constraint firstAttribute="centerX" secondItem="hj1-3c-vXX" secondAttribute="centerX" id="REf-zK-GAV"/>
+                            <constraint firstAttribute="trailing" secondItem="N7T-Tg-Xai" secondAttribute="trailing" id="i2U-HI-gbX"/>
+                            <constraint firstAttribute="centerX" secondItem="prY-rl-D2i" secondAttribute="centerX" id="kcZ-9m-qbO"/>
+                            <constraint firstAttribute="centerX" secondItem="N7T-Tg-Xai" secondAttribute="centerX" id="khy-qf-L23"/>
+                            <constraint firstItem="hj1-3c-vXX" firstAttribute="width" secondItem="prY-rl-D2i" secondAttribute="width" id="kle-PA-Zcc"/>
+                            <constraint firstAttribute="centerY" secondItem="prY-rl-D2i" secondAttribute="centerY" id="ujB-bJ-Ca2"/>
+                            <constraint firstItem="N7T-Tg-Xai" firstAttribute="leading" secondItem="E5p-rC-8k9" secondAttribute="leading" id="zVx-9X-Lrz"/>
+                        </constraints>
+                    </view>
+                    <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
+                    <connections>
+                        <outlet property="loginBtn" destination="prY-rl-D2i" id="n0e-k2-ZCI"/>
+                        <outlet property="textField" destination="N7T-Tg-Xai" id="tOu-Nh-DoW"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="31o-8n-HNv" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="130" y="1314"/>
+        </scene>
         <!--Photos of Me-->
         <scene sceneID="W3K-0D-Uik">
             <objects>
@@ -407,7 +479,7 @@
         <image name="me_dark" width="36" height="32"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="3A4-ph-72f"/>
+        <segue reference="NYS-bL-yPB"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
 </document>
