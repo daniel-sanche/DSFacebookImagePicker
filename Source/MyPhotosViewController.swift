@@ -23,8 +23,22 @@ class MyPhotosViewController: PhotoCollectionViewController {
   }
   
   override func viewDidLoad() {
-    fetchData()
+    
+
+    if !FacebookNetworking.isLoggedIn() {
+        let loginController = DSFacebookImagePicker.loginController()
+        self.tabBarController?.presentViewController(loginController, animated: true, completion: nil)
+    }
+
+
   }
+    
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+        if self.photoList == nil {
+            fetchData()
+        }
+    }
 
   @IBAction func cancelPressed(sender: AnyObject) {
     if let tabBar = tabBarController as? DSFacebookImagePicker{

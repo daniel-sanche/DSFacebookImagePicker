@@ -25,6 +25,7 @@ class DSFacebookImagePicker: UITabBarController{
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         fixAppearance()
     }
   
@@ -58,5 +59,11 @@ class DSFacebookImagePicker: UITabBarController{
       delegate.facebookImagePicker(self, didSelectImage:selected)
     }
   }
+    
+    class func loginController() -> UIViewController{
+        let storyboard = UIStoryboard(name: "FacebookPicker", bundle: nil)
+        let loginController = storyboard.instantiateViewControllerWithIdentifier("Login") as UIViewController
+        return loginController
+    }
 
 }

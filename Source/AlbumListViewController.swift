@@ -19,6 +19,12 @@ class AlbumListViewController: UITableViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
     UIApplication.sharedApplication().setStatusBarStyle(UIStatusBarStyle.LightContent, animated: true)
+    
+    if !FacebookNetworking.isLoggedIn() {
+        let loginController = DSFacebookImagePicker.loginController()
+        self.tabBarController?.presentViewController(loginController, animated: true, completion: nil)
+    }
+    
   }
   
   override func viewDidAppear(animated: Bool) {
@@ -26,16 +32,17 @@ class AlbumListViewController: UITableViewController {
     
     
     if albumList == nil{
-      FacebookNetworking.getAlbumList({ (album, error) in
-        if album != nil {
-          self.albumList = album!
-          self.tableView.reloadData()
-        }
-      })
-    }
+        FacebookNetworking.getAlbumList({ (album, error) in
+            if album != nil {
+                self.albumList = album!
+                self.tableView.reloadData()
+            }
+        })
     
     tableView.reloadData()
+    }
   }
+    
   
   override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
     return 1

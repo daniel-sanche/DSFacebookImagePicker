@@ -14,13 +14,7 @@ class FacebookNetworking: NSObject {
   class func getAlbumList(completionHandler:([PhotoAlbum]?, NSError?)->()){
     //attempt log in
     if(!isLoggedIn()){
-      logIn({ (session, error) -> Void in
-        if error != nil{
-          completionHandler(nil, error)
-        } else {
-          self.getAlbumList(completionHandler)
-        }
-      })
+      completionHandler(nil, nil)
       return
     }
     FBRequestConnection.startWithGraphPath("me/albums?limit=1000", {connection, result, error in
@@ -45,13 +39,7 @@ class FacebookNetworking: NSObject {
   class func getImagesFromAlbumID(albumID:String, photoCount:Int=100, completionHandler:([Photo]?, NSError?)->()){
     //attempt log in
     if(!isLoggedIn()){
-      logIn({ (session, error) -> Void in
-        if error != nil{
-          completionHandler(nil, error)
-        } else {
-          self.getImagesFromAlbumID(albumID, photoCount:photoCount, completionHandler:completionHandler)
-        }
-      })
+      completionHandler(nil, nil)
       return
     }
     FBRequestConnection.startWithGraphPath("\(albumID)/photos?limit=\(photoCount)", {connection, result, error in
