@@ -25,6 +25,11 @@ class DSFacebookImagePicker: UITabBarController{
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        if !FacebookNetworking.isLoggedIn(){
+            self.performSegueWithIdentifier("signin", sender: nil)
+        }
+        
         fixAppearance()
     }
   
