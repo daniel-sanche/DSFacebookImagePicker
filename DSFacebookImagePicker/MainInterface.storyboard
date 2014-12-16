@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6245" systemVersion="14A388a" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="bna-rC-Mej">
+    <dependencies>
+        <deployment defaultVersion="1792" identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6238"/>
+    </dependencies>
+    <scenes>
+        <!--Test View Controller-->
+        <scene sceneID="dpw-1F-tHY">
+            <objects>
+                <viewController id="bna-rC-Mej" customClass="TestViewController" customModule="DSFacebookImagePicker" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="zH4-s7-8TC"/>
+                        <viewControllerLayoutGuide type="bottom" id="kxK-vy-KMR"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="hxN-gP-vTh">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="7zQ-PM-hHU">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="542"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wXJ-vK-kuX">
+                                <rect key="frame" x="220" y="562" width="160" height="30"/>
+                                <state key="normal" title="Pick a Facebook Photo">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="launchPhotoPicker:" destination="bna-rC-Mej" eventType="touchUpInside" id="5N1-6J-hgP"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="kxK-vy-KMR" firstAttribute="top" secondItem="wXJ-vK-kuX" secondAttribute="bottom" constant="8" id="01h-Vy-xRu"/>
+                            <constraint firstItem="7zQ-PM-hHU" firstAttribute="top" secondItem="hxN-gP-vTh" secondAttribute="top" id="FxW-km-peR"/>
+                            <constraint firstAttribute="trailing" secondItem="7zQ-PM-hHU" secondAttribute="trailing" id="G5M-rt-qE0"/>
+                            <constraint firstItem="wXJ-vK-kuX" firstAttribute="top" secondItem="7zQ-PM-hHU" secondAttribute="bottom" constant="20" id="XJ5-qx-FjY"/>
+                            <constraint firstAttribute="centerX" secondItem="wXJ-vK-kuX" secondAttribute="centerX" id="jzY-6W-5AA"/>
+                            <constraint firstItem="7zQ-PM-hHU" firstAttribute="leading" secondItem="hxN-gP-vTh" secondAttribute="leading" id="rFs-2O-w8Q"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="imageView" destination="7zQ-PM-hHU" id="hqS-ke-Us7"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2OJ-3D-2cu" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="244" y="217"/>
+        </scene>
+    </scenes>
+</document>
