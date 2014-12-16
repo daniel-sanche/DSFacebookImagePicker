@@ -243,7 +243,7 @@
                                 </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Log in to Access Facebook Photos" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N7T-Tg-Xai">
-                                <rect key="frame" x="80" y="128" width="440" height="106"/>
+                                <rect key="frame" x="0.0" y="128" width="600" height="106"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="440" id="9wb-6U-Gdb"/>
                                     <constraint firstAttribute="height" constant="106" id="PGB-xj-aeT"/>
@@ -251,6 +251,11 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                 <color key="textColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
                                 <nil key="highlightedColor"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="9wb-6U-Gdb"/>
+                                    </mask>
+                                </variation>
                             </label>
                         </subviews>
                         <color key="backgroundColor" red="0.2233184677" green="0.44654898850000002" blue="0.89194147099999999" alpha="1" colorSpace="calibratedRGB"/>
@@ -261,10 +266,12 @@
                             <constraint firstItem="prY-rl-D2i" firstAttribute="top" secondItem="N7T-Tg-Xai" secondAttribute="bottom" constant="39" id="Qfn-RC-28y"/>
                             <constraint firstItem="hj1-3c-vXX" firstAttribute="height" secondItem="prY-rl-D2i" secondAttribute="height" id="Qwu-Bg-wmi"/>
                             <constraint firstAttribute="centerX" secondItem="hj1-3c-vXX" secondAttribute="centerX" id="REf-zK-GAV"/>
+                            <constraint firstAttribute="trailing" secondItem="N7T-Tg-Xai" secondAttribute="trailing" id="i2U-HI-gbX"/>
                             <constraint firstAttribute="centerX" secondItem="prY-rl-D2i" secondAttribute="centerX" id="kcZ-9m-qbO"/>
                             <constraint firstAttribute="centerX" secondItem="N7T-Tg-Xai" secondAttribute="centerX" id="khy-qf-L23"/>
                             <constraint firstItem="hj1-3c-vXX" firstAttribute="width" secondItem="prY-rl-D2i" secondAttribute="width" id="kle-PA-Zcc"/>
                             <constraint firstAttribute="centerY" secondItem="prY-rl-D2i" secondAttribute="centerY" id="ujB-bJ-Ca2"/>
+                            <constraint firstItem="N7T-Tg-Xai" firstAttribute="leading" secondItem="E5p-rC-8k9" secondAttribute="leading" id="zVx-9X-Lrz"/>
                         </constraints>
                     </view>
                     <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
