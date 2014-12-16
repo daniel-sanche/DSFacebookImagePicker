@@ -45,7 +45,9 @@ func facebookImagePickerDidCancel(picker: DSFacebookImagePicker) {
 
 ##Screenshots
 
-![Image 1](../blob/feature/edit_about/screenshot1.png?raw=true)
+![Image 1](images/screenshot1.png?raw=true)
+![Image 2](images/screenshot2.png?raw=true)
+![Image 3](images/screenshot3.png?raw=true)
 
 ##License
 
