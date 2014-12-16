@@ -1,18 +1,20 @@
 DSFacebookImagePicker
 =====================
 
-DSFacebookImagePicker is an image picker replacement that selects photos from the user's Facebook account instead of their media library. It was designed to be used as similar as possible to the standard image picker. It was developed in Swift for iOS 7 and above.
+DSFacebookImagePicker is an image picker replacement that selects photos from the user's Facebook account instead of their local photo library. It was designed to be used as similar as possible to the standard image picker. It was developed in Swift and it should be compatible iOS 7 and above. (Mostly tested on iOS 8, so if there are probelems with 7, let me know)
  
 
-Installation
+#Installation
 
-DSFacebookImagePicker requires the Facebook SDK. For more information see https://developers.facebook.com/docs/ios/getting-started
+DSFacebookImagePicker requires the Facebook SDK. For more information see the [Facebook Documentation](https://developers.facebook.com/docs/ios/getting-started)
 
-Because Cocoapods does not currently properly handle swift projects, you will have to clone the repo to use this in a project. Just copy all the files in the "Source" directory.
+An example project has been provided, but because you need a unique Facebook app identifier, it will not be usable until you follow Facebook's tutorials.
+
+Because Cocoapods does not currently properly handle swift projects, you will have to include this in your project the old fashioned way by copying all the files in the "Source" directory to your project.
 
 
 
-Usage
+#Usage
 
 The interface was designed to be as similar to UIImagePickerController as possible
 
@@ -24,7 +26,7 @@ picker.imagePickerDelegate = self
 presentViewController(picker, animated: true, completion: nil)
 ```
 
-to handle success:
+to handle the resulting image:
 
 ```
 func facebookImagePicker(picker: DSFacebookImagePicker, didSelectImage: UIImage) {
@@ -34,14 +36,16 @@ func facebookImagePicker(picker: DSFacebookImagePicker, didSelectImage: UIImage)
 
 ```
 
-to handle failure:
+to handle user cancelation:
 ```
 func facebookImagePickerDidCancel(picker: DSFacebookImagePicker) {
     dismissViewControllerAnimated(true, completion: nil)
 }
 ```
 
-License
+#Screenshots
+
+#License
 
 The MIT License (MIT)
 
