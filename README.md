@@ -4,7 +4,7 @@ DSFacebookImagePicker
 DSFacebookImagePicker is an image picker replacement that selects photos from the user's Facebook account instead of their local photo library. It was designed to be used as similar as possible to the standard image picker. It was developed in Swift and it should be compatible iOS 7 and above. (Mostly tested on iOS 8, so if there are probelems with 7, let me know)
  
 
-#Installation
+##Installation
 
 DSFacebookImagePicker requires the Facebook SDK. For more information see the [Facebook Documentation](https://developers.facebook.com/docs/ios/getting-started)
 
@@ -14,7 +14,7 @@ Because Cocoapods does not currently properly handle swift projects, you will ha
 
 
 
-#Usage
+##Usage
 
 The interface was designed to be as similar to UIImagePickerController as possible
 
@@ -43,9 +43,11 @@ func facebookImagePickerDidCancel(picker: DSFacebookImagePicker) {
 }
 ```
 
-#Screenshots
+##Screenshots
 
-#License
+![Image 1](../blob/master/screenshot1.png?raw=true)
+
+##License
 
 The MIT License (MIT)
 
