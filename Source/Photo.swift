@@ -52,8 +52,8 @@ class Photo {
       
       if let error = readError{
         self.imageLoadFailed = true
-      } else {
-        self.thumbnailData = UIImage(data:data)
+      } else if data != nil {
+        self.thumbnailData = UIImage(data:data!)
       }
       
     })
@@ -63,8 +63,8 @@ class Photo {
     if !isCached && thumbnailData != nil{
       let tempDirectory = NSURL(fileURLWithPath: NSTemporaryDirectory(), isDirectory: true)
 
-      if photoID != nil{
-        let cacheURL = tempDirectory.URLByAppendingPathComponent(photoID!)
+      if photoID != nil && tempDirectory != nil{
+        let cacheURL = tempDirectory!.URLByAppendingPathComponent(photoID!)
     
         let success = UIImagePNGRepresentation(thumbnailData).writeToURL(cacheURL, atomically: true)
       

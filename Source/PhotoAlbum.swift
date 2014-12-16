@@ -50,8 +50,8 @@ class PhotoAlbum {
                   
                       if let error = writeError{
                         self.imageLoadFailed = true
-                      } else {
-                        self.coverPhoto = UIImage(data:data)
+                      } else if data != nil {
+                        self.coverPhoto = UIImage(data:data!)
                       }
                       
                     })

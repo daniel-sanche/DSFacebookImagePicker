@@ -57,7 +57,9 @@ class PhotoDetailViewController: UIViewController {
         app.networkActivityIndicatorVisible = false
       } else {
         dispatch_async(dispatch_get_main_queue(), { () in
-          self.imageView.image = UIImage(data:data)
+            if data != nil {
+                self.imageView.image = UIImage(data:data!)
+            }
           self.imageState = .Active
           app.networkActivityIndicatorVisible = false
         })
@@ -69,9 +71,9 @@ class PhotoDetailViewController: UIViewController {
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_HIGH, 0), {
       var readError: NSError?
       let data = NSData(contentsOfURL:imageURL, options: nil, error: &readError)
-      if readError == nil && self.imageView.image==nil{
+      if readError == nil && self.imageView.image==nil && data != nil{
         dispatch_async(dispatch_get_main_queue(), { () in
-          self.imageView.image = UIImage(data:data)
+          self.imageView.image = UIImage(data:data!)
         })
       }
     })
