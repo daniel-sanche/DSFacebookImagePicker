@@ -18,23 +18,25 @@ The interface was designed to be as similar to UIImagePickerController as possib
 
 To create a picker:
 
+'''
 let picker = DSFacebookImagePicker.imagePicker()
 picker.imagePickerDelegate = self
 presentViewController(picker, animated: true, completion: nil)
+'''
 
 to handle success:
-
+'''
 func facebookImagePicker(picker: DSFacebookImagePicker, didSelectImage: UIImage) {
     let selectedImage = didSelectImage
     dismissViewControllerAnimated(true, completion: nil)
 }
-
+'''
 to handle failure:
-
+'''
 func facebookImagePickerDidCancel(picker: DSFacebookImagePicker) {
     dismissViewControllerAnimated(true, completion: nil)
 }
-
+'''
 
 License
 
