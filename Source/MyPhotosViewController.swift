@@ -14,7 +14,7 @@ class MyPhotosViewController: PhotoCollectionViewController {
     
     let maxPhotosOfMe = 100
     
-    FacebookNetworking.getImagesFromAlbumID("10152831646314772", photoCount:maxPhotosOfMe, { result, error in
+    FacebookNetworking.getImagesFromAlbumID("10152831646314772", photoCount:maxPhotosOfMe, completionHandler: { result, error in
       if result != nil {
         self.photoList = result!
         self.collectionView?.reloadData()
