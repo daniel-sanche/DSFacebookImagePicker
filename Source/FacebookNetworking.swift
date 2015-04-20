@@ -17,13 +17,13 @@ class FacebookNetworking: NSObject {
       completionHandler(nil, nil)
       return
     }
-    FBRequestConnection.startWithGraphPath("me/albums?limit=1000", {connection, result, error in
+    FBRequestConnection.startWithGraphPath("me/albums?limit=1000", completionHandler: {connection, result, error in
       
       if let json = result as? NSDictionary{
         var albumList = [PhotoAlbum]()
         
-        for thisAlbumDict in json.objectForKey("data") as NSArray{
-          let newAlbum = PhotoAlbum(json:thisAlbumDict as NSDictionary)
+        for thisAlbumDict in json.objectForKey("data") as! NSArray{
+          let newAlbum = PhotoAlbum(json:thisAlbumDict as! NSDictionary)
           albumList.append(newAlbum)
         }
         
@@ -42,14 +42,14 @@ class FacebookNetworking: NSObject {
       completionHandler(nil, nil)
       return
     }
-    FBRequestConnection.startWithGraphPath("\(albumID)/photos?limit=\(photoCount)", {connection, result, error in
+    FBRequestConnection.startWithGraphPath("\(albumID)/photos?limit=\(photoCount)", completionHandler: {connection, result, error in
       
       if let json = result as? NSDictionary{
         
         var photoList = [Photo]()
         
-        for thisPhotoDict in json["data"] as NSArray {
-          let newPhoto = Photo(json:thisPhotoDict as NSDictionary)
+        for thisPhotoDict in json["data"] as! NSArray {
+          let newPhoto = Photo(json:thisPhotoDict as! NSDictionary)
           photoList.append(newPhoto)
         }
         
@@ -67,7 +67,7 @@ class FacebookNetworking: NSObject {
     
     var permissions : [String] = [String]()
     
-    let currentPermissions : [String] = FBSession.activeSession().permissions as [String]
+    let currentPermissions : [String] = FBSession.activeSession().permissions as! [String]
     
     let requiredPerimissions = ["user_photos"]
     
@@ -100,7 +100,7 @@ class FacebookNetworking: NSObject {
     
     if(session.isOpen){
       if let permissions = missingPermissions(){
-        FBSession.activeSession().requestNewReadPermissions(permissions, handler)
+        FBSession.activeSession().requestNewReadPermissions(permissions, completionHandler: handler)
       }
     } else {
       FBSession.openActiveSessionWithReadPermissions(missingPermissions(), allowLoginUI:true, completionHandler: { session, state, error in
@@ -111,18 +111,18 @@ class FacebookNetworking: NSObject {
   
   class func findBestImageURL(imageOptionsArray:NSArray, minImageSize:Int=Int.min) -> NSURL?{
     let sortDescriptor = NSSortDescriptor(key:"height", ascending: true)
-    let sortedArray = imageOptionsArray.sortedArrayUsingDescriptors([sortDescriptor]) as [NSDictionary]
+    let sortedArray = imageOptionsArray.sortedArrayUsingDescriptors([sortDescriptor]) as! [NSDictionary]
     
     for thisDict in sortedArray{
-      let height = thisDict["height"] as Int
+      let height = thisDict["height"] as! Int
       if(height > minImageSize){
-        let URLString = thisDict["source"] as String
+        let URLString = thisDict["source"] as! String
         return NSURL(string:URLString)
       }
     }
     
     if let largest = sortedArray.last {
-      let URLString = largest["source"] as String
+      let URLString = largest["source"] as! String
       return NSURL(string:URLString)
     }
     return nil

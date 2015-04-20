@@ -19,7 +19,7 @@ class DSFacebookImagePicker: UITabBarController{
   
   class func imagePicker() -> DSFacebookImagePicker{
     let storyboard = UIStoryboard(name: "FacebookPicker", bundle: nil)
-    let picker = storyboard.instantiateViewControllerWithIdentifier("Picker") as DSFacebookImagePicker
+    let picker = storyboard.instantiateViewControllerWithIdentifier("Picker") as! DSFacebookImagePicker
     return picker
   }
 
@@ -34,7 +34,7 @@ class DSFacebookImagePicker: UITabBarController{
     UITabBar.appearance().selectedImageTintColor = UIColor(white: 1, alpha: 1)
     
     //make it so that the tint color will apply to each image only when it is selected
-    for thisItem : UITabBarItem in self.tabBar.items as [UITabBarItem]{
+    for thisItem : UITabBarItem in self.tabBar.items as! [UITabBarItem]{
       if let image = thisItem.image{
         thisItem.selectedImage = image.imageWithRenderingMode(UIImageRenderingMode.AlwaysTemplate)
       }
@@ -62,7 +62,7 @@ class DSFacebookImagePicker: UITabBarController{
     
     class func loginController() -> UIViewController{
         let storyboard = UIStoryboard(name: "FacebookPicker", bundle: nil)
-        let loginController = storyboard.instantiateViewControllerWithIdentifier("Login") as UIViewController
+        let loginController = storyboard.instantiateViewControllerWithIdentifier("Login") as! UIViewController
         return loginController
     }
 

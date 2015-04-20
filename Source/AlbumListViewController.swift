@@ -61,11 +61,11 @@ class AlbumListViewController: UITableViewController {
   override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
     
     if let thisAlbum = albumList?[indexPath.row]{
-      let cell = tableView.dequeueReusableCellWithIdentifier("AlbumCell", forIndexPath:indexPath) as AlbumCell
+      let cell = tableView.dequeueReusableCellWithIdentifier("AlbumCell", forIndexPath:indexPath) as! AlbumCell
       cell.setUpWithAlbum(thisAlbum)
       return cell
     } else {
-      let placeholder = tableView.dequeueReusableCellWithIdentifier("PlaceholderCell", forIndexPath:indexPath) as UITableViewCell
+      let placeholder = tableView.dequeueReusableCellWithIdentifier("PlaceholderCell", forIndexPath:indexPath) as! UITableViewCell
       return placeholder
     }
   }
@@ -88,11 +88,11 @@ class AlbumListViewController: UITableViewController {
     let segueID = segue.identifier
     
     if(segueID == "AlbumDetail"){
-      let thisAlbum = sender as PhotoAlbum
-      let dest = segue.destinationViewController as PhotoCollectionViewController
-      dest.placeHolderNumber = thisAlbum.count
-      dest.albumID = thisAlbum.albumID
-      dest.title = thisAlbum.name
+      let thisAlbum = sender as! PhotoAlbum
+      let dest = segue.destinationViewController as? PhotoCollectionViewController
+      dest?.placeHolderNumber = thisAlbum.count
+      dest?.albumID = thisAlbum.albumID
+      dest?.title = thisAlbum.name
     }
     
     

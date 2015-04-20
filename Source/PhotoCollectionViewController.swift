@@ -25,7 +25,7 @@ class PhotoCollectionViewController:  UICollectionViewController, UICollectionVi
   
   func fetchData(){
     if let newID = albumID{
-      FacebookNetworking.getImagesFromAlbumID(newID, photoCount:1000, { result, error in
+      FacebookNetworking.getImagesFromAlbumID(newID, photoCount:1000, completionHandler: { result, error in
         if result != nil {
           self.photoList = result!
           self.collectionView?.reloadData()
@@ -55,11 +55,11 @@ class PhotoCollectionViewController:  UICollectionViewController, UICollectionVi
   override func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
 
     if let thisPhoto = photoList?[indexPath.row]{
-      let cell = collectionView.dequeueReusableCellWithReuseIdentifier("PhotoCell", forIndexPath: indexPath) as PhotoCell
+      let cell = collectionView.dequeueReusableCellWithReuseIdentifier("PhotoCell", forIndexPath: indexPath) as! PhotoCell
       cell.setUpWithPhoto(thisPhoto)
       return cell
     } else {
-      let placeholder = collectionView.dequeueReusableCellWithReuseIdentifier("PrototypeCell", forIndexPath: indexPath) as UICollectionViewCell
+      let placeholder = collectionView.dequeueReusableCellWithReuseIdentifier("PrototypeCell", forIndexPath: indexPath) as! UICollectionViewCell
       return placeholder
     }
   }
@@ -81,8 +81,9 @@ class PhotoCollectionViewController:  UICollectionViewController, UICollectionVi
   override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
     let identifier = segue.identifier
     if(identifier == PhotoSelectedSegue){
-      let dest = segue.destinationViewController.topViewController as PhotoDetailViewController
-      dest.selectedPhoto = sender as? Photo
+        if let dest = segue.destinationViewController.topViewController as? PhotoDetailViewController{
+            dest.selectedPhoto = sender as? Photo
+        }
     }
   }
   

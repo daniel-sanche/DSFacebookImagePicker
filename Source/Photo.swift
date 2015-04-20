@@ -22,9 +22,13 @@ class Photo {
     
     if let newID = json["id"] as? String{
       photoID = newID
+    } else {
+        photoID = nil
     }
     if let newName = fromDict?["name"]{
       ownerName = newName
+    } else {
+        ownerName = nil
     }
     imageLoadFailed = false
     isCached = false
@@ -32,6 +36,9 @@ class Photo {
     if let imageArray = json["images"] as? NSArray {
       thumbnailURL = FacebookNetworking.findBestImageURL(imageArray, minImageSize:Int.min)
       fullImageURL = FacebookNetworking.findBestImageURL(imageArray, minImageSize:fullImageSize)
+    } else {
+        thumbnailURL = nil
+        fullImageURL = nil
     }
   }
   
